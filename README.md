@@ -132,7 +132,7 @@ http://localhost/phpmyadmin
 Create database:
 
 ```sql
-CREATE DATABASE clevercubs;
+CREATE DATABASE kg2grow;
 ```
 
 Import your database tables.
@@ -169,9 +169,9 @@ Add your screenshots here.
 Example:
 
 ```md
-![Home Page](screenshots/home.png)
-![Register Page](screenshots/register.png)
-![Game Page](screenshots/game.png)
+![Home Page](screenshots/dashbord.png)
+![Register Page](screenshots/signup.png)
+![Game Page](screenshots/memory.png)
 ```
 
 ---
