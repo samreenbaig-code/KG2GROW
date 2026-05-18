@@ -1,0 +1,488 @@
+/* ============================= */
+/* WORD GAME CONTAINER */
+/* ============================= */
+
+.word-container{
+
+  text-align: center;
+
+  padding: 40px;
+
+  font-family: 'Comic Sans MS';
+
+  background: #dff3ff;
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+
+/* ============================= */
+/* WORD IMAGE */
+/* ============================= */
+
+.word-image{
+
+  width: 400px;
+
+  max-width: 100%;
+
+  margin: 20px auto;
+
+  display: block;
+}
+
+
+/* ============================= */
+/* ANSWER SLOTS */
+/* ============================= */
+
+.answer{
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin: 20px;
+
+  flex-wrap: wrap;
+}
+
+
+/* ============================= */
+/* LETTER CHOICES */
+/* ============================= */
+
+.letters{
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-top: 25px;
+
+  flex-wrap: wrap;
+}
+
+
+/* ============================= */
+/* LETTER BOX */
+/* ============================= */
+
+.letter{
+
+  width: 60px;
+
+  height: 60px;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  cursor: grab;
+
+  user-select: none;
+
+  color: white;
+
+  animation: rainbow 6s linear infinite;
+
+  transition: 0.2s ease;
+}
+
+
+/* Hover */
+
+.letter:hover{
+
+  transform: scale(1.1);
+}
+
+
+/* Active Drag */
+
+.letter:active{
+
+  cursor: grabbing;
+
+  transform: scale(1.1);
+}
+
+
+/* ============================= */
+/* RAINBOW ANIMATION */
+/* ============================= */
+
+@keyframes rainbow{
+
+  0%{background:#ff5252}
+
+  20%{background:#ff9800}
+
+  40%{
+    background:#ffeb3b;
+    color:#333;
+  }
+
+  60%{background:#4caf50}
+
+  80%{background:#2196f3}
+
+  100%{background:#9c27b0}
+}
+
+
+/* ============================= */
+/* SLOT */
+/* ============================= */
+
+.slot{
+
+  width: 60px;
+
+  height: 60px;
+
+  border: 3px dashed #999;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 28px;
+
+  background: white;
+
+  transition: 0.2s;
+}
+
+
+/* Correct Slot */
+
+.slot.correct{
+
+  background: #4caf50;
+
+  color: white;
+
+  border-color: #2e7d32;
+
+  transform: scale(1.1);
+}
+
+
+/* ============================= */
+/* NAVIGATION BUTTONS */
+/* ============================= */
+
+.navigation{
+
+  margin-top: 30px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  flex-wrap: wrap;
+}
+
+
+/* Navigation Button */
+
+.nav-btn{
+
+  padding: 12px 25px;
+
+  font-size: 18px;
+
+  background: #4caf50;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+/* Hover */
+
+.nav-btn:hover{
+
+  transform: scale(1.1);
+
+  background: #43a047;
+}
+
+
+/* Previous Button */
+
+.prev{
+
+  background: #ff7043;
+}
+
+
+/* Previous Hover */
+
+.prev:hover{
+
+  background: #f4511e;
+}
+
+
+/* ============================= */
+/* HOME BUTTON */
+/* ============================= */
+
+.home-btn{
+
+  position: absolute;
+
+  top: 20px;
+
+  left: 20px;
+
+  background: #ffd54f;
+
+  border: none;
+
+  padding: 10px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+/* Hover */
+
+.home-btn:hover{
+
+  transform: scale(1.05);
+}
+
+
+/* ============================= */
+/* CONFETTI */
+/* ============================= */
+
+.confetti{
+
+  font-size: 40px;
+
+  margin: 20px;
+
+  animation: confettiPop 1s infinite;
+}
+
+
+/* Confetti Animation */
+
+@keyframes confettiPop{
+
+  0%{
+    transform: scale(1) rotate(0deg)
+  }
+
+  50%{
+    transform: scale(1.3) rotate(20deg)
+  }
+
+  100%{
+    transform: scale(1) rotate(-20deg)
+  }
+
+}
+
+
+/* ============================= */
+/* SHAKE ANIMATION */
+/* ============================= */
+
+.shake{
+
+  animation: shake 0.4s;
+}
+
+
+/* Shake */
+
+@keyframes shake{
+
+  0%{transform:translateX(0)}
+
+  25%{transform:translateX(-5px)}
+
+  50%{transform:translateX(5px)}
+
+  75%{transform:translateX(-5px)}
+
+  100%{transform:translateX(0)}
+}
+
+
+/* ============================= */
+/* TABLET RESPONSIVE */
+/* ============================= */
+
+@media(max-width:992px){
+
+  .word-image{
+
+    width: 320px;
+  }
+
+  .letter,
+  .slot{
+
+    width: 55px;
+
+    height: 55px;
+
+    font-size: 24px;
+  }
+
+}
+
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media(max-width:768px){
+
+  .word-container{
+
+    padding: 90px 15px 30px;
+  }
+
+
+  /* Word Image */
+
+  .word-image{
+
+    width: 240px;
+
+    margin: 15px auto;
+  }
+
+
+  /* Answer */
+
+  .answer{
+
+    gap: 10px;
+
+    margin: 15px 0;
+  }
+
+
+  /* Letters */
+
+  .letters{
+
+    gap: 10px;
+
+    margin-top: 20px;
+  }
+
+
+  /* Letter + Slot */
+
+  .letter,
+  .slot{
+
+    width: 48px;
+
+    height: 48px;
+
+    font-size: 22px;
+
+    border-radius: 10px;
+  }
+
+
+  /* Navigation */
+
+  .navigation{
+
+    gap: 15px;
+
+    margin-top: 25px;
+  }
+
+
+  /* Buttons */
+
+  .nav-btn{
+
+    padding: 10px 18px;
+
+    font-size: 16px;
+  }
+
+
+  /* Confetti */
+
+  .confetti{
+
+    font-size: 28px;
+  }
+
+}
+
+
+/* ============================= */
+/* SMALL MOBILE DEVICES */
+/* ============================= */
+
+@media(max-width:480px){
+
+  .word-image{
+
+    width: 200px;
+  }
+
+  .letter,
+  .slot{
+
+    width: 42px;
+
+    height: 42px;
+
+    font-size: 18px;
+  }
+
+  .nav-btn{
+
+    width: 100%;
+
+    max-width: 220px;
+  }
+
+}

@@ -1,0 +1,613 @@
+/* ============================= */
+/* MAIN PAGE */
+/* ============================= */
+
+body{
+
+  margin: 0;
+
+  padding: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  overflow-x: hidden;
+}
+
+
+/* ============================= */
+/* GAME CONTAINER */
+/* ============================= */
+
+.game-container{
+
+  position: relative;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #ffd6ec,
+    #c8f0ff,
+    #d9ffd9
+  );
+}
+
+
+/* ============================= */
+/* GAME CONTENT */
+/* ============================= */
+
+.count-game{
+
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  padding-top: 180px;
+
+  padding-left: 15px;
+
+  padding-right: 15px;
+}
+
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.count-game h2{
+
+  font-size: 50px;
+
+  margin-bottom: 40px;
+
+  color: #d352cf;
+
+  text-shadow: 6px 6px 5px #ffcc00;
+}
+
+
+/* ============================= */
+/* OBJECTS */
+/* ============================= */
+
+.objects{
+
+  margin: 30px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+
+/* Object Image */
+
+.object-img{
+
+  width: 220px;
+
+  max-width: 100%;
+
+  margin: 15px;
+
+  animation: bounce 2s infinite ease-in-out;
+}
+
+
+/* ============================= */
+/* BOUNCE ANIMATION */
+/* ============================= */
+
+@keyframes bounce{
+
+  0%{
+    transform: translateY(0);
+  }
+
+  50%{
+    transform: translateY(-20px);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+
+}
+
+
+/* ============================= */
+/* ANSWER BUTTONS */
+/* ============================= */
+
+.answers{
+
+  margin-top: 30px;
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+}
+
+
+/* Answer Button */
+
+.answer-btn{
+
+  padding: 28px 50px;
+
+  font-size: 35px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  background: #4CAF50;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* Hover */
+
+.answer-btn:hover{
+
+  background: #43a047;
+
+  transform: scale(1.1);
+}
+
+
+/* ============================= */
+/* RESULT TEXT */
+/* ============================= */
+
+.result{
+
+  font-size: 24px;
+
+  margin-top: 20px;
+
+  color: #ff5722;
+
+  font-weight: bold;
+}
+
+
+/* ============================= */
+/* BACKGROUND DECOR */
+/* ============================= */
+
+.background-decor{
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* ============================= */
+/* BUBBLES */
+/* ============================= */
+
+.bubble{
+
+  position: absolute;
+
+  bottom: -120px;
+
+  width: 40px;
+
+  height: 40px;
+
+  background: rgba(255,255,255,0.5);
+
+  border-radius: 50%;
+
+  animation: bubbleFloat linear infinite;
+}
+
+
+/* Bubble Positions */
+
+.bubble:nth-child(1){
+
+  left: 10%;
+
+  animation-duration: 10s;
+}
+
+.bubble:nth-child(2){
+
+  left: 25%;
+
+  width: 60px;
+
+  height: 60px;
+
+  animation-duration: 14s;
+}
+
+.bubble:nth-child(3){
+
+  left: 40%;
+
+  animation-duration: 12s;
+}
+
+.bubble:nth-child(4){
+
+  left: 65%;
+
+  width: 100px;
+
+  height: 100px;
+
+  animation-duration: 16s;
+}
+
+.bubble:nth-child(5){
+
+  left: 80%;
+
+  animation-duration: 18s;
+}
+
+
+/* Bubble Animation */
+
+@keyframes bubbleFloat{
+
+  0%{
+
+    transform: translateY(0);
+
+    opacity: 0;
+  }
+
+  50%{
+
+    opacity: 1;
+  }
+
+  100%{
+
+    transform: translateY(-1000px);
+
+    opacity: 0;
+  }
+
+}
+
+
+/* ============================= */
+/* CLOUDS */
+/* ============================= */
+
+.cloud{
+
+  position: absolute;
+
+  width: 300px;
+
+  animation: cloudBounce 4s ease-in-out infinite;
+}
+
+
+/* Cloud Positions */
+
+.cloud1{ top:40px; left:5%; }
+
+.cloud2{ top:220px; left:25%; }
+
+.cloud3{ top:260px; left:45%; }
+
+.cloud4{ top:280px; left:65%; }
+
+.cloud5{ top:460px; left:80%; }
+
+.cloud6{ top:460px; left:15%; }
+
+.cloud7{ top:520px; left:35%; }
+
+.cloud8{ top:420px; left:55%; }
+
+.cloud9{ top:580px; left:75%; }
+
+
+/* Cloud Animation */
+
+@keyframes cloudBounce{
+
+  0%{
+    transform: translateY(0px);
+  }
+
+  50%{
+    transform: translateY(-15px);
+  }
+
+  100%{
+    transform: translateY(0px);
+  }
+
+}
+
+
+/* ============================= */
+/* NEXT BUTTON */
+/* ============================= */
+
+.next-btn{
+
+  margin-top: 25px;
+
+  padding: 12px 30px;
+
+  font-size: 20px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: linear-gradient(
+    45deg,
+    #ff8a00,
+    #ff3d77
+  );
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+
+  transition: 0.3s;
+}
+
+
+/* Hover */
+
+.next-btn:hover{
+
+  transform: scale(1.1);
+
+  animation: bounce 1.5s infinite;
+}
+
+
+/* ============================= */
+/* STARS */
+/* ============================= */
+
+.stars{
+
+  position: absolute;
+
+  top: 40%;
+
+  left: 50%;
+
+  transform: translate(-50%,-50%);
+
+  pointer-events: none;
+}
+
+
+/* Single Star */
+
+.star{
+
+  font-size: 40px;
+
+  position: absolute;
+
+  animation: starBurst 1.5s ease-out forwards;
+}
+
+
+/* Star Positions */
+
+.star:nth-child(1){ left:-80px; top:-40px; }
+
+.star:nth-child(2){ left:60px; top:-60px; }
+
+.star:nth-child(3){ left:-50px; top:60px; }
+
+.star:nth-child(4){ left:80px; top:30px; }
+
+.star:nth-child(5){ left:0px; top:-90px; }
+
+.star:nth-child(6){ left:0px; top:90px; }
+
+
+/* Star Animation */
+
+@keyframes starBurst{
+
+  0%{
+
+    transform: scale(0.3);
+
+    opacity: 1;
+  }
+
+  100%{
+
+    transform: scale(1.8);
+
+    opacity: 0;
+  }
+
+}
+
+
+/* ============================= */
+/* TABLET RESPONSIVE */
+/* ============================= */
+
+@media(max-width:992px){
+
+  .count-game h2{
+
+    font-size: 40px;
+  }
+
+  .object-img{
+
+    width: 170px;
+  }
+
+  .answer-btn{
+
+    font-size: 28px;
+
+    padding: 20px 35px;
+  }
+
+}
+
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media(max-width:768px){
+
+  .count-game{
+
+    padding-top: 120px;
+  }
+
+
+  /* Title */
+
+  .count-game h2{
+
+    font-size: 30px;
+
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+  }
+
+
+  /* Object Image */
+
+  .object-img{
+
+    width: 110px;
+
+    margin: 10px;
+  }
+
+
+  /* Answer Buttons */
+
+  .answer-btn{
+
+    padding: 14px 24px;
+
+    font-size: 22px;
+
+    border-radius: 12px;
+  }
+
+
+  /* Result */
+
+  .result{
+
+    font-size: 20px;
+  }
+
+
+  /* Next Button */
+
+  .next-btn{
+
+    font-size: 16px;
+
+    padding: 10px 22px;
+  }
+
+
+  /* Clouds */
+
+  .cloud{
+
+    width: 150px;
+  }
+
+
+  /* Stars */
+
+  .star{
+
+    font-size: 28px;
+  }
+
+}
+
+
+/* ============================= */
+/* SMALL MOBILE DEVICES */
+/* ============================= */
+
+@media(max-width:480px){
+
+  .count-game h2{
+
+    font-size: 24px;
+  }
+
+  .object-img{
+
+    width: 90px;
+  }
+
+  .answer-btn{
+
+    width: 80px;
+
+    padding: 12px;
+
+    font-size: 18px;
+  }
+
+  .next-btn{
+
+    width: 100%;
+
+    max-width: 220px;
+  }
+
+}

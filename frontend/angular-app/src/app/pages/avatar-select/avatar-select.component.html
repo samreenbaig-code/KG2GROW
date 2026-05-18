@@ -1,0 +1,16 @@
+<div class="avatar-page">
+
+<h1>Choose Your Avatar</h1>
+
+<div class="avatars">
+
+<div class="avatar" *ngFor="let avatar of avatars"
+(click)="selectAvatar(avatar)">
+
+<img [src]="avatar">
+
+</div>
+
+</div>
+
+</div>

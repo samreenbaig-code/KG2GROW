@@ -1,0 +1,325 @@
+/* ============================= */
+/* BACKGROUND */
+/* ============================= */
+
+.matching-bg{
+
+  min-height: 100vh;
+
+  background-image: url('/matchbg.png');
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  overflow-x: hidden;
+}
+
+
+/* ============================= */
+/* MAIN CONTAINER */
+/* ============================= */
+
+.matching-game{
+
+  text-align: center;
+
+  width: 100%;
+}
+
+
+/* ============================= */
+/* OBJECTS SECTION */
+/* ============================= */
+
+.objects{
+
+  display: flex;
+
+  gap: 40px;
+
+  justify-content: center;
+
+  margin-top: 40px;
+
+  flex-wrap: wrap;
+}
+
+
+/* ============================= */
+/* OBJECT IMAGE */
+/* ============================= */
+
+.object img{
+
+  width: 120px;
+
+  max-width: 100%;
+
+  transition: 0.2s ease;
+}
+
+
+/* Hover */
+
+.object img:hover{
+
+  transform: scale(1.05);
+}
+
+
+/* ============================= */
+/* DROP ZONE */
+/* ============================= */
+
+.drop-zone{
+
+  width: 80px;
+
+  height: 80px;
+
+  border-radius: 50%;
+
+  border: 3px dashed #999;
+
+  margin: auto;
+
+  margin-top: 10px;
+
+  background: rgba(255,255,255,0.4);
+}
+
+
+/* ============================= */
+/* COLOR BUCKETS */
+/* ============================= */
+
+.colors{
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 40px;
+
+  margin-top: 60px;
+
+  flex-wrap: wrap;
+}
+
+
+/* ============================= */
+/* SINGLE BUCKET */
+/* ============================= */
+
+.bucket{
+
+  width: 90px;
+
+  height: 90px;
+
+  border-radius: 50%;
+
+  cursor: grab;
+
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+
+  transition: 0.2s ease;
+}
+
+
+/* Hover */
+
+.bucket:hover{
+
+  transform: scale(1.08);
+}
+
+
+/* Bucket Colors */
+
+.red{ background:#ff4d4d; }
+
+.yellow{ background:#ffd93d; }
+
+.blue{ background:#4d96ff; }
+
+.green{ background:#6bcB77; }
+
+
+/* ============================= */
+/* MESSAGE TEXT */
+/* ============================= */
+
+.message{
+
+  font-size: 24px;
+
+  margin-top: 30px;
+
+  color: #333;
+
+  font-weight: bold;
+}
+
+
+/* ============================= */
+/* TABLET RESPONSIVE */
+/* ============================= */
+
+@media(max-width:992px){
+
+  .objects{
+
+    gap: 30px;
+  }
+
+  .object img{
+
+    width: 100px;
+  }
+
+  .bucket{
+
+    width: 80px;
+
+    height: 80px;
+  }
+
+}
+
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media(max-width:768px){
+
+  .matching-bg{
+
+    align-items: flex-start;
+
+    padding-top: 100px;
+  }
+
+
+  /* Objects */
+
+  .objects{
+
+    gap: 20px;
+
+    margin-top: 25px;
+  }
+
+
+  /* Object Images */
+
+  .object img{
+
+    width: 75px;
+  }
+
+
+  /* Drop Zone */
+
+  .drop-zone{
+
+    width: 55px;
+
+    height: 55px;
+
+    border-width: 2px;
+  }
+
+
+  /* Color Buckets */
+
+  .colors{
+
+    gap: 20px;
+
+    margin-top: 35px;
+  }
+
+
+  /* Buckets */
+
+  .bucket{
+
+    width: 60px;
+
+    height: 60px;
+  }
+
+
+  /* Message */
+
+  .message{
+
+    font-size: 18px;
+
+    margin-top: 20px;
+  }
+
+}
+
+
+/* ============================= */
+/* SMALL MOBILE DEVICES */
+/* ============================= */
+
+@media(max-width:480px){
+
+  .objects{
+
+    gap: 15px;
+  }
+
+
+  /* Object Image */
+
+  .object img{
+
+    width: 60px;
+  }
+
+
+  /* Drop Zone */
+
+  .drop-zone{
+
+    width: 45px;
+
+    height: 45px;
+  }
+
+
+  /* Buckets */
+
+  .bucket{
+
+    width: 50px;
+
+    height: 50px;
+  }
+
+
+  /* Message */
+
+  .message{
+
+    font-size: 16px;
+  }
+
+}

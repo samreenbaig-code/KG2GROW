@@ -1,0 +1,262 @@
+<!-- ============================= -->
+<!-- BACKGROUND SHAPES -->
+<!-- Decorative floating shapes -->
+<!-- ============================= -->
+
+<div class="bg-shapes">
+
+
+  <!-- Background circle -->
+  <div class="bg-circle"></div>
+
+
+  <!-- Background square -->
+  <div class="bg-square"></div>
+
+
+  <!-- Background triangle -->
+  <div class="bg-triangle"></div>
+
+
+  <!-- Background star -->
+  <div class="bg-star"></div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- MAIN GAME BACKGROUND -->
+<!-- Match shape game section -->
+<!-- ============================= -->
+
+<div class="level3-bg">
+
+
+  <!-- ============================= -->
+  <!-- GAME CONTAINER -->
+  <!-- ============================= -->
+
+  <div class="matching-container">
+
+
+    <!-- ============================= -->
+    <!-- GAME TITLE -->
+    <!-- ============================= -->
+
+    <h1>
+
+      Match the Shape
+
+    </h1>
+
+
+    <!-- ============================= -->
+    <!-- TARGET SHAPE -->
+    <!-- Player matches this shape -->
+    <!-- ============================= -->
+
+    <div class="target">
+
+
+      <!-- SVG Shape Area -->
+
+      <svg width="200" height="200">
+
+
+        <!-- ============================= -->
+        <!-- TARGET CIRCLE -->
+        <!-- ============================= -->
+
+        <circle
+
+          *ngIf="currentShape==='circle'"
+
+          cx="100"
+
+          cy="100"
+
+          r="70"
+
+          fill="#FFD93D">
+
+        </circle>
+
+
+        <!-- ============================= -->
+        <!-- TARGET SQUARE -->
+        <!-- ============================= -->
+
+        <rect
+
+          *ngIf="currentShape==='square'"
+
+          x="40"
+
+          y="40"
+
+          width="120"
+
+          height="120"
+
+          fill="#6BCB77">
+
+        </rect>
+
+
+        <!-- ============================= -->
+        <!-- TARGET TRIANGLE -->
+        <!-- ============================= -->
+
+        <polygon
+
+          *ngIf="currentShape==='triangle'"
+
+          points="100,30 30,170 170,170"
+
+          fill="#4D96FF">
+
+        </polygon>
+
+
+        <!-- ============================= -->
+        <!-- TARGET STAR -->
+        <!-- ============================= -->
+
+        <polygon
+
+          *ngIf="currentShape==='star'"
+
+          points="100,10 120,70 190,70 135,110 155,170 100,135 45,170 65,110 10,70 80,70"
+
+          fill="#FF6B6B">
+
+        </polygon>
+
+
+        <!-- ============================= -->
+        <!-- TARGET HEART -->
+        <!-- ============================= -->
+
+        <path
+
+          *ngIf="currentShape==='heart'"
+
+          d="M100 170 L40 100 A40 40 0 0 1 100 60 A40 40 0 0 1 160 100 Z"
+
+          fill="#FF66C4">
+
+        </path>
+
+      </svg>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- SHAPE OPTIONS -->
+    <!-- Select matching shape -->
+    <!-- ============================= -->
+
+    <div class="options">
+
+
+      <!-- ============================= -->
+      <!-- CIRCLE BUTTON -->
+      <!-- ============================= -->
+
+      <button
+
+        class="shape-btn"
+
+        (click)="selectShape('circle')">
+
+
+        <img
+
+          src="/circle.png"
+
+          alt="circle">
+
+      </button>
+
+
+      <!-- ============================= -->
+      <!-- SQUARE BUTTON -->
+      <!-- ============================= -->
+
+      <button
+
+        class="shape-btn"
+
+        (click)="selectShape('square')">
+
+
+        <img
+
+          src="/square.png"
+
+          alt="square">
+
+      </button>
+
+
+      <!-- ============================= -->
+      <!-- TRIANGLE BUTTON -->
+      <!-- ============================= -->
+
+      <button
+
+        class="shape-btn"
+
+        (click)="selectShape('triangle')">
+
+
+        <img
+
+          src="/triangle.png"
+
+          alt="triangle">
+
+      </button>
+
+
+      <!-- ============================= -->
+      <!-- HEART BUTTON -->
+      <!-- ============================= -->
+
+      <button
+
+        class="shape-btn"
+
+        (click)="selectShape('heart')">
+
+
+        <img
+
+          src="/heart.png"
+
+          alt="heart">
+
+      </button>
+
+
+      <!-- ============================= -->
+      <!-- STAR BUTTON -->
+      <!-- ============================= -->
+
+      <button
+
+        class="shape-btn"
+
+        (click)="selectShape('star')">
+
+
+        <img
+
+          src="/star.png"
+
+          alt="star">
+
+      </button>
+
+    </div>

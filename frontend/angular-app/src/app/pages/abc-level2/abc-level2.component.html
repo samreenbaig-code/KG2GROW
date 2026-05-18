@@ -1,0 +1,104 @@
+<!-- ============================= -->
+<!-- GAME CONTAINER -->
+<!-- Main alphabet balloon game -->
+<!-- ============================= -->
+
+<div class="game-container">
+
+
+  <!-- ============================= -->
+  <!-- TARGET LETTER -->
+  <!-- Shows which letter to find -->
+  <!-- ============================= -->
+
+  <h1>
+
+    Find Letter: {{targetLetter}}
+
+  </h1>
+
+
+  <!-- ============================= -->
+  <!-- SCORE DISPLAY -->
+  <!-- Shows current player score -->
+  <!-- ============================= -->
+
+  <h2 class="score">
+
+    Score: {{score}}
+
+  </h2>
+
+
+  <!-- ============================= -->
+  <!-- SKY AREA -->
+  <!-- Holds all floating balloons -->
+  <!-- ============================= -->
+
+  <div class="sky">
+
+
+    <!-- ============================= -->
+    <!-- SINGLE BALLOON -->
+    <!-- Repeats for each bubble -->
+    <!-- ============================= -->
+
+    <div
+      class="balloon"
+
+      *ngFor="let bubble of bubbles; let i = index"
+
+      [style.left]="bubble.left"
+
+      [style.animationDelay.s]="bubble.delay"
+
+      (click)="popBubble(bubble,i)"
+    >
+
+
+      <!-- ============================= -->
+      <!-- BALLOON IMAGE -->
+      <!-- ============================= -->
+
+      <img [src]="bubble.image">
+
+
+      <!-- ============================= -->
+      <!-- LETTER INSIDE BALLOON -->
+      <!-- ============================= -->
+
+      <div class="letter">
+
+        {{bubble.letter}}
+
+      </div>
+
+
+      <!-- ============================= -->
+      <!-- CORRECT ANSWER EFFECT -->
+      <!-- Shows stars animation -->
+      <!-- ============================= -->
+
+      <div class="stars" *ngIf="bubble.status=='correct'">
+
+        ✨✨✨
+
+      </div>
+
+
+      <!-- ============================= -->
+      <!-- WRONG ANSWER EFFECT -->
+      <!-- Shows wrong mark -->
+      <!-- ============================= -->
+
+      <div class="wrong" *ngIf="bubble.status=='wrong'">
+
+        ❌
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,111 @@
+<!-- ============================= -->
+<!-- NUMBER GAME CONTAINER -->
+<!-- Main learn numbers section -->
+<!-- ============================= -->
+
+<div class="number-game">
+
+
+  <!-- ============================= -->
+  <!-- GAME TITLE -->
+  <!-- ============================= -->
+
+  <h2>
+
+    Learn Numbers
+
+  </h2>
+
+
+  <!-- ============================= -->
+  <!-- SELECTED NUMBER DISPLAY -->
+  <!-- Show current selected number -->
+  <!-- ============================= -->
+
+  <div class="number-display">
+
+    {{ selectedNumber }}
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- NUMBER BUTTON GRID -->
+  <!-- Contains all number buttons -->
+  <!-- ============================= -->
+
+  <div class="numbers-grid">
+
+
+    <!-- ============================= -->
+    <!-- SINGLE NUMBER BUTTON -->
+    <!-- Click to show number card -->
+    <!-- ============================= -->
+
+    <button 
+      *ngFor="let num of numbers"
+
+      (click)="showNumber(num)"
+
+      class="number-btn">
+
+      {{ num }}
+
+    </button>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- POPUP CARD -->
+  <!-- Show selected number image -->
+  <!-- ============================= -->
+
+  <div
+    class="popup"
+
+    *ngIf="selectedNumber">
+
+
+    <!-- ============================= -->
+    <!-- POPUP CONTENT -->
+    <!-- Number image background -->
+    <!-- ============================= -->
+
+    <div 
+      class="popup-card"
+
+      [style.background-image]="'url(/numbers/' + selectedNumber + '.png)'">
+
+
+      <!-- ============================= -->
+      <!-- NUMBER TITLE -->
+      <!-- Display selected number -->
+      <!-- ============================= -->
+
+      <h1 class="number-title">
+
+        {{ selectedNumber }}
+
+      </h1>
+
+
+      <!-- ============================= -->
+      <!-- CLOSE BUTTON -->
+      <!-- Close popup card -->
+      <!-- ============================= -->
+
+      <button
+        class="close-btn"
+
+        (click)="closeCard()">
+
+        Close
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

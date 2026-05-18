@@ -1,0 +1,110 @@
+<!-- ============================= -->
+<!-- SHAPE MEMORY GAME CONTAINER -->
+<!-- Main memory game section -->
+<!-- ============================= -->
+
+<div class="game-container">
+
+
+  <!-- ============================= -->
+  <!-- GAME TITLE -->
+  <!-- ============================= -->
+
+  <h2>
+
+    🔷 Shape Memory Game
+
+  </h2>
+
+
+  <!-- ============================= -->
+  <!-- GAME MESSAGE -->
+  <!-- Show game result/status -->
+  <!-- ============================= -->
+
+  <p class="message">
+
+    {{message}}
+
+  </p>
+
+
+  <!-- ============================= -->
+  <!-- CARD GRID -->
+  <!-- Contains all memory cards -->
+  <!-- ============================= -->
+
+  <div class="grid">
+
+
+    <!-- ============================= -->
+    <!-- SINGLE MEMORY CARD -->
+    <!-- Click to flip card -->
+    <!-- ============================= -->
+
+    <div 
+      class="card"
+
+      *ngFor="let card of cards; let i = index"
+
+      (click)="flipCard(i)"
+
+      [class.flipped]="card.flipped || card.matched"
+    >
+
+
+      <!-- ============================= -->
+      <!-- CARD INNER -->
+      <!-- Used for flip animation -->
+      <!-- ============================= -->
+
+      <div class="card-inner">
+
+
+        <!-- ============================= -->
+        <!-- CARD FRONT -->
+        <!-- Hidden side of card -->
+        <!-- ============================= -->
+
+        <div class="card-front">
+
+          ?
+
+        </div>
+
+
+        <!-- ============================= -->
+        <!-- CARD BACK -->
+        <!-- Show shape image -->
+        <!-- ============================= -->
+
+        <div class="card-back">
+
+          <img [src]="card.image">
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- NEXT BUTTON -->
+    <!-- Restart memory game -->
+    <!-- ============================= -->
+
+    <button
+      *ngIf="showNextBtn"
+
+      (click)="nextGame()"
+
+      class="next-btn">
+
+      🔁 Play Again
+
+    </button>
+
+  </div>
+
+</div>

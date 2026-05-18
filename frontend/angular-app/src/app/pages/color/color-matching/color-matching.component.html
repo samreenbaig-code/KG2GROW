@@ -1,0 +1,57 @@
+<div class="matching-bg">
+
+<div class="matching-game">
+
+<h1>Match the Color</h1>
+
+<!-- Fruits -->
+
+<div class="objects">
+
+<div class="object" *ngFor="let item of objects">
+
+<img [src]="item.img">
+
+<div
+class="drop-zone"
+[id]="item.name"
+(drop)="drop($event,item.name)"
+(dragover)="allowDrop($event)">
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Color Buckets -->
+
+<div class="colors">
+
+<div class="bucket red"
+draggable="true"
+(dragstart)="drag($event,'red')">
+</div>
+
+<div class="bucket yellow"
+draggable="true"
+(dragstart)="drag($event,'yellow')">
+</div>
+
+<div class="bucket blue"
+draggable="true"
+(dragstart)="drag($event,'blue')">
+</div>
+
+<div class="bucket green"
+draggable="true"
+(dragstart)="drag($event,'green')">
+</div>
+
+</div>
+
+<p class="message">{{message}}</p>
+
+</div>
+
+</div>

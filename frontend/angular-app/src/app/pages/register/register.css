@@ -1,0 +1,345 @@
+/* ============================= */
+/* FULL PAGE */
+/* ============================= */
+
+.register-page{
+
+  min-height:100vh;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:20px;
+
+  background-image:url('/registerbg.png');
+
+  background-size:cover;
+
+  background-position:center;
+
+  background-repeat:no-repeat;
+
+  overflow:hidden;
+
+  position:relative;
+}
+
+
+/* ============================= */
+/* GLASS CARD */
+/* ============================= */
+
+.register-card{
+
+  width:430px;
+
+  max-width:100%;
+
+  padding:50px 35px;
+
+  border-radius:35px;
+
+  background:rgba(255,255,255,0.25);
+
+  backdrop-filter:blur(15px);
+
+  -webkit-backdrop-filter:blur(15px);
+
+  box-shadow:0 10px 40px rgba(0,0,0,0.25);
+
+  text-align:center;
+
+  border:2px solid rgba(255,255,255,0.3);
+
+  animation:fadeIn 1s ease;
+
+  box-sizing:border-box;
+}
+
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.register-card h1{
+
+  font-size:58px;
+
+  color:rgb(229, 120, 203);
+
+  margin-bottom:40px;
+
+  text-shadow:0 4px 10px rgba(0,0,0,0.3);
+
+  line-height:1.2;
+}
+
+
+/* ============================= */
+/* INPUTS */
+/* ============================= */
+
+.register-card input{
+
+  width:100%;
+
+  padding:20px;
+
+  margin-bottom:25px;
+
+  border:none;
+
+  border-radius:20px;
+
+  outline:none;
+
+  font-size:26px;
+
+  background:rgba(244, 148, 193, 0.95);
+
+  color:#ffffff;
+
+  transition:0.3s;
+
+  box-sizing:border-box;
+}
+
+
+/* INPUT PLACEHOLDER */
+
+.register-card input::placeholder{
+
+  color:#fff;
+}
+
+
+/* INPUT FOCUS */
+
+.register-card input:focus{
+
+  transform:scale(1.03);
+
+  box-shadow:0 0 15px rgba(255,255,255,0.8);
+}
+
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+.register-card button{
+
+  width:100%;
+
+  padding:20px;
+
+  border:none;
+
+  border-radius:25px;
+
+  background:linear-gradient(
+    90deg,
+    #ff5ca8,
+    #ff87b5
+  );
+
+  color:white;
+
+  font-size:24px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  box-shadow:0 5px 20px rgba(255,92,168,0.4);
+}
+
+
+/* BUTTON HOVER */
+
+.register-card button:hover{
+
+  transform:translateY(-3px) scale(1.03);
+
+  box-shadow:0 10px 25px rgba(255,92,168,0.5);
+}
+
+
+/* ============================= */
+/* MESSAGE */
+/* ============================= */
+
+.register-card p{
+
+  margin-top:20px;
+
+  font-size:22px;
+
+  color:#444;
+
+  font-weight:bold;
+
+  line-height:1.4;
+}
+
+
+/* ============================= */
+/* ANIMATION */
+/* ============================= */
+
+@keyframes fadeIn{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(40px);
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateY(0);
+  }
+}
+
+
+/* ============================= */
+/* TABLET VIEW */
+/* ============================= */
+
+@media(max-width:768px){
+
+  .register-card{
+
+    width:90%;
+
+    padding:40px 25px;
+
+    border-radius:28px;
+  }
+
+  .register-card h1{
+
+    font-size:46px;
+
+    margin-bottom:30px;
+  }
+
+  .register-card input{
+
+    font-size:22px;
+
+    padding:18px;
+  }
+
+  .register-card button{
+
+    font-size:28px;
+
+    padding:18px;
+  }
+
+  .register-card p{
+
+    font-size:20px;
+  }
+
+}
+
+
+/* ============================= */
+/* MOBILE VIEW */
+/* ============================= */
+
+@media(max-width:600px){
+
+  .register-page{
+
+    padding:15px;
+  }
+
+  .register-card{
+
+    width:100%;
+
+    padding:30px 20px;
+
+    border-radius:25px;
+  }
+
+  .register-card h1{
+
+    font-size:34px;
+
+    margin-bottom:25px;
+  }
+
+  .register-card input{
+
+    font-size:18px;
+
+    padding:15px;
+
+    border-radius:15px;
+  }
+
+  .register-card button{
+
+    font-size:22px;
+
+    padding:15px;
+
+    border-radius:18px;
+  }
+
+  .register-card p{
+
+    font-size:16px;
+  }
+
+}
+
+
+/* ============================= */
+/* EXTRA SMALL MOBILE */
+/* ============================= */
+
+@media(max-width:400px){
+
+  .register-card{
+
+    padding:25px 15px;
+  }
+
+  .register-card h1{
+
+    font-size:20px;
+  }
+
+  .register-card input{
+
+    font-size:12px;
+
+    padding:13px;
+  }
+
+  .register-card button{
+
+    font-size:18px;
+
+    padding:13px;
+  }
+
+  .register-card p{
+
+    font-size:10px;
+  }
+
+}

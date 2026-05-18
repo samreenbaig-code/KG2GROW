@@ -1,0 +1,75 @@
+<!-- ============================= -->
+<!-- ALPHABET GAME CONTAINER -->
+<!-- Main alphabet learning section -->
+<!-- ============================= -->
+
+<div class="alphabet-game">
+
+
+  <!-- ============================= -->
+  <!-- SCORE DISPLAY -->
+  <!-- Shows current player score -->
+  <!-- ============================= -->
+
+  <h2 class="score">
+
+    ⭐ Score: {{ score }}
+
+  </h2>
+
+
+  <!-- ============================= -->
+  <!-- LETTER GRID -->
+  <!-- Displays all alphabet letters -->
+  <!-- ============================= -->
+
+  <div class="letters">
+
+
+    <!-- ============================= -->
+    <!-- SINGLE LETTER CARD -->
+    <!-- Click to hear pronunciation -->
+    <!-- ============================= -->
+
+    <div 
+      class="letter"
+
+      *ngFor="let letter of letters; let i = index"
+
+      [style.background]="getColor(i)"
+
+      (click)="speak(letter)"
+    >
+
+      {{ letter }}
+
+    </div>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- LETTER IMAGE -->
+  <!-- Shows image for selected letter -->
+  <!-- ============================= -->
+
+  <div class="letter-image" *ngIf="selectedImage">
+
+    <img [src]="selectedImage">
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- LETTER WORD -->
+  <!-- Example: A for Apple -->
+  <!-- ============================= -->
+
+  <h3 class="word" *ngIf="selectedLetter">
+
+    {{ selectedLetter }} for 
+    {{ letterWords[selectedLetter] || 'Something Fun 🎉' }}
+
+  </h3>
+
+</div>

@@ -1,0 +1,90 @@
+<div class="game-container">
+
+  <!-- ============================= -->
+<!-- MAIN GAME CONTAINER -->
+<!-- ============================= -->
+
+<div class="game-container">
+
+
+  <!-- ============================= -->
+  <!-- GAME TITLE -->
+  <!-- ============================= -->
+
+  <h2>
+
+    🍎 What color is this?
+
+  </h2>
+
+
+  <!-- ============================= -->
+  <!-- FRUIT IMAGE -->
+  <!-- ============================= -->
+
+  <div class="fruit-box">
+
+    <img
+      [src]="currentFruit"
+      class="fruit-img"
+    >
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- COLOR OPTIONS -->
+  <!-- ============================= -->
+
+  <div class="options">
+
+
+    <!-- ============================= -->
+    <!-- SINGLE COLOR BUTTON -->
+    <!-- ============================= -->
+
+    <button
+
+      *ngFor="let color of options"
+
+      (click)="checkAnswer(color)"
+
+      class="color-btn"
+
+      [ngClass]="color">
+
+      {{color | uppercase}}
+
+    </button>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- MESSAGE -->
+  <!-- ============================= -->
+
+  <p class="message">
+
+    {{message}}
+
+  </p>
+
+
+  <!-- ============================= -->
+  <!-- NEXT BUTTON -->
+  <!-- ============================= -->
+
+  <button
+
+    *ngIf="showNextBtn"
+
+    class="next-btn"
+
+    (click)="nextQuestion()">
+
+    🚀 Next
+
+  </button>
+
+</div>

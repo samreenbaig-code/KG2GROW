@@ -1,0 +1,125 @@
+<!-- ============================= -->
+<!-- MEMORY GAME CONTAINER -->
+<!-- Main animal memory game -->
+<!-- ============================= -->
+
+<div class="game-container">
+
+
+  <!-- ============================= -->
+  <!-- GAME TITLE -->
+  <!-- ============================= -->
+
+  <h2>
+
+    🐾 Animal Memory Game
+
+  </h2>
+
+
+  <!-- ============================= -->
+  <!-- CARD GRID -->
+  <!-- Contains all memory cards -->
+  <!-- ============================= -->
+
+  <div class="grid">
+
+
+    <!-- ============================= -->
+    <!-- SINGLE MEMORY CARD -->
+    <!-- Click to flip card -->
+    <!-- ============================= -->
+
+    <div 
+      class="card"
+
+      *ngFor="let card of cards; let i = index"
+
+      (click)="flipCard(i)"
+
+      [class.flipped]="card.flipped || card.matched"
+    >
+
+
+      <!-- ============================= -->
+      <!-- CARD INNER -->
+      <!-- Used for flip animation -->
+      <!-- ============================= -->
+
+      <div class="card-inner">
+
+
+        <!-- ============================= -->
+        <!-- CARD FRONT -->
+        <!-- Hidden side of card -->
+        <!-- ============================= -->
+
+        <div class="card-front">
+
+          ❓
+
+        </div>
+
+
+        <!-- ============================= -->
+        <!-- CARD BACK -->
+        <!-- Shows animal image -->
+        <!-- ============================= -->
+
+        <div class="card-back">
+
+          <img [src]="card.image">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- GAME MESSAGE -->
+  <!-- Show result or status -->
+  <!-- ============================= -->
+
+  <p class="message">
+
+    {{message}}
+
+  </p>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- NEXT LEVEL BUTTON -->
+<!-- Open next memory level -->
+<!-- ============================= -->
+
+<button 
+  *ngIf="showNextBtn"
+
+  class="next-btn"
+
+  (click)="nextLevel()">
+
+  🚀 Next Level
+
+</button>
+
+
+<!-- ============================= -->
+<!-- FINISH BUTTON -->
+<!-- Exit memory game -->
+<!-- ============================= -->
+
+<button
+  class="finish-btn"
+
+  (click)="finishGame()">
+
+  ❌ Finish Game
+
+</button>

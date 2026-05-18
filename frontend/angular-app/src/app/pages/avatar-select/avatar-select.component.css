@@ -1,0 +1,21 @@
+.avatar-page{
+text-align:center;
+padding:40px;
+}
+
+.avatars{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.avatar img{
+width:120px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.avatar img:hover{
+transform:scale(1.2);
+}

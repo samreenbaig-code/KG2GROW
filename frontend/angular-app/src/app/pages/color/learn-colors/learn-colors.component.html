@@ -1,0 +1,21 @@
+<div class="color-bg">
+<div class="color-game">
+
+<h1>Learn Colors</h1>
+
+<div class="color-options">
+
+<div class="color red" (click)="showColor('red')"></div>
+<div class="color yellow" (click)="showColor('yellow')"></div>
+<div class="color blue" (click)="showColor('blue')"></div>
+<div class="color green" (click)="showColor('green')"></div>
+
+</div>
+
+<div class="object-area" *ngIf="currentImage">
+
+  <img class="fruit" [src]="currentImage">
+
+  <h2>{{currentText}}</h2>
+
+</div>

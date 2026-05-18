@@ -1,0 +1,86 @@
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.footer{
+
+  width:100%;
+
+  background:#000;
+
+  padding:20px 10px;
+
+  text-align:center;
+
+  margin-top:0;
+}
+
+
+/* ============================= */
+/* FOOTER CONTAINER */
+/* ============================= */
+
+.footer-container{
+
+  max-width:1200px;
+
+  margin:auto;
+}
+
+
+/* ============================= */
+/* LOGO / TITLE */
+/* ============================= */
+
+.footer h2{
+
+  color:#fff;
+
+  font-size:28px;
+
+  font-weight:700;
+
+  margin-bottom:10px;
+
+  letter-spacing:1px;
+}
+
+
+/* ============================= */
+/* COPYRIGHT TEXT */
+/* ============================= */
+
+.copyright{
+
+  color:#fff;
+
+  font-size:16px;
+
+  margin:0;
+
+  opacity:0.8;
+}
+
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media(max-width:768px){
+
+  .footer{
+
+    padding:18px 10px;
+  }
+
+  .footer h2{
+
+    font-size:22px;
+  }
+
+  .copyright{
+
+    font-size:14px;
+  }
+
+}

@@ -1,0 +1,22 @@
+<div class="find-bg">
+  <div class="find-game">
+
+<h1>{{question}}</h1>
+
+<div class="balloons">
+
+<div class="balloon red" (click)="checkColor('red')"></div>
+
+<div class="balloon yellow" (click)="checkColor('yellow')"></div>
+
+<div class="balloon blue" (click)="checkColor('blue')"></div>
+
+<div class="balloon green" (click)="checkColor('green')"></div>
+
+</div>
+
+<p class="message">{{message}}</p>
+
+<div *ngIf="showConfetti" class="confetti">🎉🎉🎉</div>
+
+</div>

@@ -1,0 +1,118 @@
+<!-- ============================= -->
+<!-- GAME BACKGROUND -->
+<!-- Main puzzle game section -->
+<!-- ============================= -->
+
+<div class="game-bg">
+
+
+  <!-- ============================= -->
+  <!-- GAME TITLE -->
+  <!-- Puzzle level heading -->
+  <!-- ============================= -->
+
+  <h1>
+
+    🧩 Puzzle Level 1
+
+  </h1>
+
+
+  <!-- ============================= -->
+  <!-- PUZZLE BOARD -->
+  <!-- Grid area for puzzle pieces -->
+  <!-- ============================= -->
+
+  <div class="board">
+
+
+    <!-- ============================= -->
+    <!-- SINGLE PUZZLE CELL -->
+    <!-- Drop area for puzzle piece -->
+    <!-- ============================= -->
+
+    <div 
+
+      class="cell"
+
+      *ngFor="let c of placed; let i = index"
+
+      (dragover)="allowDrop($event)"
+
+      (drop)="drop($event, i)">
+
+
+      <!-- ============================= -->
+      <!-- PLACED IMAGE -->
+      <!-- Show dropped puzzle piece -->
+      <!-- ============================= -->
+
+      <img
+
+        *ngIf="c"
+
+        [src]="c"
+
+        class="placed">
+
+    </div>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- PUZZLE PIECES -->
+  <!-- Draggable puzzle images -->
+  <!-- ============================= -->
+
+  <div class="pieces">
+
+
+    <!-- ============================= -->
+    <!-- SINGLE DRAGGABLE PIECE -->
+    <!-- Drag image into puzzle board -->
+    <!-- ============================= -->
+
+    <img
+
+      *ngFor="let p of pieces"
+
+      [src]="p.src"
+
+      draggable="true"
+
+      (dragstart)="drag($event, p)"
+
+      class="piece">
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- RESULT MESSAGE -->
+  <!-- Show puzzle result -->
+  <!-- ============================= -->
+
+  <p class="message">
+
+    {{message}}
+
+  </p>
+
+
+  <!-- ============================= -->
+  <!-- RESET BUTTON -->
+  <!-- Restart puzzle game -->
+  <!-- ============================= -->
+
+  <button
+
+    (click)="resetGame()"
+
+    class="reset-btn">
+
+    🔄 Restart
+
+  </button>
+
+</div>

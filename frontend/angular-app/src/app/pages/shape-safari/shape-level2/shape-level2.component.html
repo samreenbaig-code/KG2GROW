@@ -1,0 +1,308 @@
+<!-- ============================= -->
+<!-- BACKGROUND DECORATION -->
+<!-- Floating background shapes -->
+<!-- ============================= -->
+
+<div class="math-background">
+
+
+  <!-- Background circle -->
+  <div class="bg-circle"></div>
+
+
+  <!-- Background square -->
+  <div class="bg-square"></div>
+
+
+  <!-- Background triangle -->
+  <div class="bg-triangle"></div>
+
+
+  <!-- Second background square -->
+  <div class="bg-square2"></div>
+
+
+  <!-- Second background circle -->
+  <div class="bg-circle2"></div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- MAIN COLORING CONTAINER -->
+<!-- Shape coloring game -->
+<!-- ============================= -->
+
+<div class="coloring-container">
+
+
+  <!-- ============================= -->
+  <!-- GAME TITLE -->
+  <!-- ============================= -->
+
+  <h2>
+
+    Shape Coloring
+
+  </h2>
+
+
+  <!-- ============================= -->
+  <!-- SHAPE DRAWING AREA -->
+  <!-- ============================= -->
+
+  <div class="shape-area">
+
+
+    <!-- ============================= -->
+    <!-- SVG SHAPE BOARD -->
+    <!-- Click to paint shape -->
+    <!-- ============================= -->
+
+    <svg
+
+      width="250"
+
+      height="250"
+
+      (click)="paintShape()">
+
+
+      <!-- ============================= -->
+      <!-- CIRCLE SHAPE -->
+      <!-- ============================= -->
+
+      <circle
+
+        *ngIf="currentShape === 'circle'"
+
+        cx="125"
+
+        cy="125"
+
+        r="100"
+
+        stroke="#bbb"
+
+        stroke-width="6"
+
+        stroke-dasharray="10,8"
+
+        [attr.fill]="selectedColor || '#eee'">
+
+      </circle>
+
+
+      <!-- ============================= -->
+      <!-- SQUARE SHAPE -->
+      <!-- ============================= -->
+
+      <rect
+
+        *ngIf="currentShape === 'square'"
+
+        x="40"
+
+        y="40"
+
+        width="170"
+
+        height="170"
+
+        stroke="#bbb"
+
+        stroke-width="6"
+
+        stroke-dasharray="10,8"
+
+        [attr.fill]="selectedColor || '#eee'">
+
+      </rect>
+
+
+      <!-- ============================= -->
+      <!-- TRIANGLE SHAPE -->
+      <!-- ============================= -->
+
+      <polygon
+
+        *ngIf="currentShape === 'triangle'"
+
+        points="125,30 30,210 220,210"
+
+        stroke="#bbb"
+
+        stroke-width="6"
+
+        stroke-dasharray="10,8"
+
+        [attr.fill]="selectedColor || '#eee'">
+
+      </polygon>
+
+
+      <!-- ============================= -->
+      <!-- HEART SHAPE -->
+      <!-- ============================= -->
+
+      <path
+
+        *ngIf="currentShape === 'heart'"
+
+        d="M125 210 L40 120 A50 50 0 0 1 125 70 A50 50 0 0 1 210 120 Z"
+
+        stroke="#bbb"
+
+        stroke-width="6"
+
+        stroke-dasharray="10,8"
+
+        [attr.fill]="selectedColor || '#eee'">
+
+      </path>
+
+
+      <!-- ============================= -->
+      <!-- STAR SHAPE -->
+      <!-- ============================= -->
+
+      <polygon
+
+        *ngIf="currentShape === 'star'"
+
+        points="125,20 155,90 230,90 170,140 195,210 125,165 55,210 80,140 20,90 95,90"
+
+        stroke="#bbb"
+
+        stroke-width="6"
+
+        stroke-dasharray="10,8"
+
+        [attr.fill]="selectedColor || '#eee'">
+
+      </polygon>
+
+    </svg>
+
+
+    <!-- ============================= -->
+    <!-- SPARKLE EFFECT -->
+    <!-- Show after coloring -->
+    <!-- ============================= -->
+
+    <div
+
+      class="sparkle-container"
+
+      *ngIf="showSparkle">
+
+
+      <!-- Sparkle 1 -->
+      <span class="sparkle"></span>
+
+      <!-- Sparkle 2 -->
+      <span class="sparkle"></span>
+
+      <!-- Sparkle 3 -->
+      <span class="sparkle"></span>
+
+      <!-- Sparkle 4 -->
+      <span class="sparkle"></span>
+
+      <!-- Sparkle 5 -->
+      <span class="sparkle"></span>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- COLOR PALETTE -->
+    <!-- Select coloring option -->
+    <!-- ============================= -->
+
+    <div class="palette">
+
+
+      <!-- Red color -->
+      <div
+
+        class="color"
+
+        style="background:#ff4d4d"
+
+        (click)="selectColor('#ff4d4d')">
+
+      </div>
+
+
+      <!-- Blue color -->
+      <div
+
+        class="color"
+
+        style="background:#4d79ff"
+
+        (click)="selectColor('#4d79ff')">
+
+      </div>
+
+
+      <!-- Green color -->
+      <div
+
+        class="color"
+
+        style="background:#4dff88"
+
+        (click)="selectColor('#4dff88')">
+
+      </div>
+
+
+      <!-- Yellow color -->
+      <div
+
+        class="color"
+
+        style="background:#ffd24d"
+
+        (click)="selectColor('#ffd24d')">
+
+      </div>
+
+
+      <!-- Pink color -->
+      <div
+
+        class="color"
+
+        style="background:#ff66cc"
+
+        (click)="selectColor('#ff66cc')">
+
+      </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- NEXT BUTTON -->
+    <!-- Open next shape -->
+    <!-- ============================= -->
+
+    <button
+
+      class="next-btn"
+
+      [disabled]="!isColored"
+
+      (click)="nextShape()">
+
+
+      Next Shape →
+
+    </button>
+
+  </div>
+
+</div>

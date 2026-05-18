@@ -1,0 +1,102 @@
+<!-- ============================= -->
+<!-- TOP BAR COMPONENT -->
+<!-- Back button and music control -->
+<!-- ============================= -->
+
+<app-top-bar></app-top-bar>
+
+
+<!-- ============================= -->
+<!-- FLOATING CIRCLES BACKGROUND -->
+<!-- Animated decorative circles -->
+<!-- ============================= -->
+
+<div class="floating-circles">
+
+
+  <!-- Floating circle 1 -->
+  <span></span>
+
+  <!-- Floating circle 2 -->
+  <span></span>
+
+  <!-- Floating circle 3 -->
+  <span></span>
+
+  <!-- Floating circle 4 -->
+  <span></span>
+
+  <!-- Floating circle 5 -->
+  <span></span>
+
+  <!-- Floating circle 6 -->
+  <span></span>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- GAME CONTAINER -->
+<!-- Main connect shape game -->
+<!-- ============================= -->
+
+<div class="game">
+
+
+  <!-- ============================= -->
+  <!-- GAME TITLE -->
+  <!-- ============================= -->
+
+  <h2>
+
+    🧠 Connect the Shape
+
+  </h2>
+
+
+  <!-- ============================= -->
+  <!-- DRAWING CANVAS -->
+  <!-- User clicks to connect shapes -->
+  <!-- ============================= -->
+
+  <canvas
+
+    #canvas
+
+    width="500"
+
+    height="500"
+
+    (click)="click($event)">
+
+  </canvas>
+
+
+  <!-- ============================= -->
+  <!-- RESULT MESSAGE -->
+  <!-- Show game feedback -->
+  <!-- ============================= -->
+
+  <p>
+
+    {{message}}
+
+  </p>
+
+
+  <!-- ============================= -->
+  <!-- NEXT BUTTON -->
+  <!-- Open next shape challenge -->
+  <!-- ============================= -->
+
+  <button
+
+    *ngIf="showNextBtn"
+
+    (click)="next()">
+
+    ➡️ Next Shape
+
+  </button>
+
+</div>

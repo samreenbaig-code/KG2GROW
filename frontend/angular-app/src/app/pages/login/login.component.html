@@ -1,0 +1,95 @@
+<div class="login-container">
+
+  <!-- 🎥 Background Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="loginbg.mp4" type="video/mp4">
+  </video>
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <div class="login-card">
+
+    <h2>Welcome Back! 👋</h2>
+    <p class="subtitle">Login to continue your adventure</p>
+
+    <form (ngSubmit)="login()" autocomplete="on">
+
+  <!-- ============================= -->
+  <!-- EMAIL INPUT -->
+  <!-- ============================= -->
+
+  <div class="input-group">
+
+    <label>Email</label>
+
+    <input
+      type="email"
+      [(ngModel)]="email"
+      name="email"
+      required
+      autocomplete="username"
+    />
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- PASSWORD INPUT -->
+  <!-- ============================= -->
+
+  <div class="input-group">
+
+    <label>Password</label>
+
+    <input
+      type="password"
+      [(ngModel)]="password"
+      name="password"
+      required
+      autocomplete="current-password"
+    />
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- ERROR MESSAGE -->
+  <!-- ============================= -->
+
+  <p class="error" *ngIf="error">
+
+    {{ error }}
+
+  </p>
+
+
+  <!-- ============================= -->
+  <!-- LOGIN BUTTON -->
+  <!-- ============================= -->
+
+  <button type="submit" class="login-btn">
+
+    Login
+
+  </button>
+
+
+  <!-- ============================= -->
+  <!-- REGISTER BUTTON -->
+  <!-- ============================= -->
+
+  <button
+    type="button"
+    class="register-btn"
+    (click)="goToRegister()">
+
+    Create Free Account
+
+  </button>
+
+</form>
+      
+
+  </div>
+</div>

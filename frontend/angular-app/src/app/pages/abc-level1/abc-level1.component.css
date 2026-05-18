@@ -1,0 +1,506 @@
+/* ============================= */
+/* BODY */
+/* ============================= */
+
+body {
+
+  margin: 0;
+
+  overflow-x: hidden;
+}
+
+
+/* ============================= */
+/* HOST CONTAINER */
+/* ============================= */
+
+:host {
+
+  display: block;
+
+  min-height: 100vh;
+
+  background: linear-gradient(
+    -45deg,
+    #ff9a9e,
+    #fad0c4,
+    #a18cd1,
+    #fbc2eb
+  );
+
+  background-size: 400% 400%;
+
+  animation: gradientBG 8s ease infinite;
+
+  padding: 40px;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* BACKGROUND ANIMATION */
+/* ============================= */
+
+@keyframes gradientBG {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
+
+
+/* ============================= */
+/* TOP BAR */
+/* ============================= */
+
+.top-bar {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+}
+
+
+/* ============================= */
+/* STARS & SCORE */
+/* ============================= */
+
+.stars,
+.score {
+
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+
+/* ============================= */
+/* GENERAL BUTTON */
+/* ============================= */
+
+button {
+
+  background: #ff6b6b;
+
+  border: none;
+
+  padding: 8px 14px;
+
+  border-radius: 15px;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+/* ============================= */
+/* MUSIC CONTROL */
+/* ============================= */
+
+.music-control {
+
+  position: absolute;
+
+  top: 20px;
+
+  right: 20px;
+}
+
+
+/* Music Button */
+
+.music-control button {
+
+  background: #ff6b6b;
+
+  border: none;
+
+  padding: 10px 18px;
+
+  border-radius: 20px;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* Hover */
+
+.music-control button:hover {
+
+  background: #ff9f43;
+}
+
+
+/* ============================= */
+/* ALPHABET GAME CONTAINER */
+/* ============================= */
+
+.alphabet-game {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  padding-top: 100px;
+
+  text-align: center;
+}
+
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.title {
+
+  font-size: 36px;
+
+  margin-bottom: 40px;
+
+  font-weight: bold;
+}
+
+
+/* ============================= */
+/* LETTER GRID */
+/* ============================= */
+
+.letters {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+
+  justify-content: center;
+}
+
+
+/* ============================= */
+/* SINGLE LETTER BOX */
+/* ============================= */
+
+.letter {
+
+  width: 100px;
+
+  height: 100px;
+
+  font-size: 50px;
+
+  font-weight: bold;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+
+/* Hover */
+
+.letter:hover {
+
+  transform: scale(1.2);
+}
+
+
+/* ============================= */
+/* SCORE */
+/* ============================= */
+
+.score {
+
+  text-align: center;
+
+  font-size: 24px;
+
+  margin-bottom: 20px;
+}
+
+
+/* ============================= */
+/* LETTER IMAGE */
+/* ============================= */
+
+.letter-image {
+
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+
+/* Letter Image */
+
+.letter-image img {
+
+  width: 650px;
+
+  max-width: 100%;
+
+  animation: pop 0.4s ease;
+}
+
+
+/* ============================= */
+/* WORD TEXT */
+/* ============================= */
+
+.word {
+
+  text-align: center;
+
+  font-size: 35px;
+
+  margin-top: 15px;
+
+  color: #ff6b6b;
+}
+
+
+/* ============================= */
+/* POP ANIMATION */
+/* ============================= */
+
+@keyframes pop {
+
+  from {
+
+    transform: scale(0);
+  }
+
+  to {
+
+    transform: scale(1);
+  }
+
+}
+
+
+/* ============================= */
+/* CONFETTI */
+/* ============================= */
+
+.confetti {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 10px;
+
+  height: 10px;
+
+  background: red;
+
+  animation: fall 1s linear forwards;
+}
+
+
+/* Confetti Fall */
+
+@keyframes fall {
+
+  to {
+
+    transform: translateY(500px);
+
+    opacity: 0;
+  }
+
+}
+
+
+/* ============================= */
+/* TABLET RESPONSIVE */
+/* ============================= */
+
+@media(max-width:992px){
+
+  .letter{
+
+    width: 85px;
+
+    height: 85px;
+
+    font-size: 40px;
+  }
+
+  .letter-image img{
+
+    width: 500px;
+  }
+
+  .word{
+
+    font-size: 28px;
+  }
+
+}
+
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media(max-width:768px){
+
+  :host{
+
+    padding: 20px;
+  }
+
+
+  /* Music Button */
+
+  .music-control{
+
+    top: 15px;
+
+    right: 15px;
+  }
+
+  .music-control button{
+
+    padding: 8px 14px;
+
+    font-size: 14px;
+  }
+
+
+  /* Game Container */
+
+  .alphabet-game{
+
+    padding-top: 80px;
+  }
+
+
+  /* Title */
+
+  .title{
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+  }
+
+
+  /* Letters */
+
+  .letters{
+
+    gap: 15px;
+  }
+
+
+  /* Letter Box */
+
+  .letter{
+
+    width: 70px;
+
+    height: 70px;
+
+    font-size: 32px;
+
+    border-radius: 12px;
+  }
+
+
+  /* Score */
+
+  .score{
+
+    font-size: 20px;
+  }
+
+
+  /* Image */
+
+  .letter-image img{
+
+    width: 280px;
+  }
+
+
+  /* Word */
+
+  .word{
+
+    font-size: 24px;
+
+    line-height: 1.3;
+  }
+
+}
+
+
+/* ============================= */
+/* SMALL MOBILE DEVICES */
+/* ============================= */
+
+@media(max-width:480px){
+
+  .letter{
+
+    width: 60px;
+
+    height: 60px;
+
+    font-size: 26px;
+  }
+
+  .letter-image img{
+
+    width: 220px;
+  }
+
+  .word{
+
+    font-size: 20px;
+  }
+
+}

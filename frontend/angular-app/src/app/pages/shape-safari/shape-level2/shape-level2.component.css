@@ -1,0 +1,512 @@
+/* ============================= */
+/* GRADIENT BACKGROUND */
+/* ============================= */
+
+.math-background{
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    #e7c3d9,
+    #b9c8dc,
+    #a7d7c5
+  );
+
+  z-index: -1;
+
+  overflow: hidden;
+}
+
+
+/* ============================= */
+/* FLOATING CIRCLES */
+/* ============================= */
+
+.bg-circle{
+
+  position: absolute;
+
+  width: 120px;
+
+  height: 120px;
+
+  border-radius: 50%;
+
+  background: #e8a6b1;
+
+  top: 80px;
+
+  left: 120px;
+
+  opacity: 0.7;
+}
+
+
+.bg-circle2{
+
+  position: absolute;
+
+  width: 120px;
+
+  height: 120px;
+
+  border-radius: 50%;
+
+  background: #e6d178;
+
+  bottom: 120px;
+
+  right: 120px;
+
+  opacity: 0.7;
+}
+
+
+/* ============================= */
+/* FLOATING SQUARES */
+/* ============================= */
+
+.bg-square{
+
+  position: absolute;
+
+  width: 100px;
+
+  height: 100px;
+
+  background: #9cd3d8;
+
+  top: 350px;
+
+  left: 260px;
+
+  opacity: 0.6;
+}
+
+
+.bg-square2{
+
+  position: absolute;
+
+  width: 90px;
+
+  height: 90px;
+
+  background: #a8e0c3;
+
+  top: 200px;
+
+  right: 220px;
+
+  opacity: 0.6;
+}
+
+
+/* ============================= */
+/* FLOATING TRIANGLE */
+/* ============================= */
+
+.bg-triangle{
+
+  position: absolute;
+
+  width: 0;
+
+  height: 0;
+
+  border-left: 80px solid transparent;
+
+  border-right: 80px solid transparent;
+
+  border-bottom: 140px solid #d8c0e4;
+
+  bottom: 150px;
+
+  left: 55%;
+
+  opacity: 0.7;
+}
+
+
+/* ============================= */
+/* MAIN CONTAINER */
+/* ============================= */
+
+.coloring-container{
+
+  text-align: center;
+
+  color: #37c2ad;
+
+  font-size: xx-large;
+
+  padding: 100px 20px 40px;
+
+  min-height: 100vh;
+
+  position: relative;
+
+  z-index: 2;
+
+  overflow-x: hidden;
+}
+
+
+/* ============================= */
+/* SHAPE AREA */
+/* ============================= */
+
+.shape-area{
+
+  margin: 80px auto;
+
+  width: 500px;
+
+  max-width: 100%;
+}
+
+
+/* ============================= */
+/* COLOR PALETTE */
+/* ============================= */
+
+.palette{
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  margin-top: 20px;
+
+  flex-wrap: wrap;
+}
+
+
+/* ============================= */
+/* COLOR BUTTON */
+/* ============================= */
+
+.color{
+
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 50%;
+
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+
+  cursor: pointer;
+
+  border: 4px solid white;
+
+  transition: 0.2s ease;
+}
+
+
+/* Hover */
+
+.color:hover{
+
+  transform: scale(1.1);
+}
+
+
+/* ============================= */
+/* NEXT BUTTON */
+/* ============================= */
+
+.next-btn{
+
+  margin-top: 40px;
+
+  padding: 18px 40px;
+
+  border-radius: 40px;
+
+  border: none;
+
+  font-size: 20px;
+
+  background: #37c2ad;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+/* Hover */
+
+.next-btn:hover{
+
+  transform: scale(1.05);
+}
+
+
+/* Disabled */
+
+.next-btn:disabled{
+
+  background: #ccc;
+
+  cursor: not-allowed;
+}
+
+
+/* ============================= */
+/* SPARKLE CONTAINER */
+/* ============================= */
+
+.sparkle-container{
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%,-50%);
+
+  pointer-events: none;
+}
+
+
+/* ============================= */
+/* SINGLE SPARKLE */
+/* ============================= */
+
+.sparkle{
+
+  position: absolute;
+
+  width: 12px;
+
+  height: 12px;
+
+  background: gold;
+
+  border-radius: 50%;
+
+  animation: sparkle 1s ease-out forwards;
+}
+
+
+/* Sparkle Positions */
+
+.sparkle:nth-child(1){ top:-40px; left:0; }
+
+.sparkle:nth-child(2){ top:0; left:40px; }
+
+.sparkle:nth-child(3){ top:40px; left:0; }
+
+.sparkle:nth-child(4){ top:0; left:-40px; }
+
+.sparkle:nth-child(5){ top:-30px; left:-30px; }
+
+
+/* ============================= */
+/* SPARKLE ANIMATION */
+/* ============================= */
+
+@keyframes sparkle{
+
+  0%{
+
+    transform: scale(0);
+
+    opacity: 1;
+  }
+
+  100%{
+
+    transform: scale(1.8);
+
+    opacity: 0;
+  }
+
+}
+
+
+/* ============================= */
+/* TABLET RESPONSIVE */
+/* ============================= */
+
+@media(max-width:992px){
+
+  .shape-area{
+
+    width: 420px;
+  }
+
+  .coloring-container{
+
+    font-size: 2rem;
+  }
+
+}
+
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media(max-width:768px){
+
+  .coloring-container{
+
+    font-size: 1.5rem;
+
+    padding: 90px 15px 30px;
+  }
+
+
+  /* Shape Area */
+
+  .shape-area{
+
+    width: 100%;
+
+    max-width: 320px;
+
+    margin: 40px auto;
+  }
+
+
+  /* Palette */
+
+  .palette{
+
+    gap: 12px;
+  }
+
+
+  /* Color Buttons */
+
+  .color{
+
+    width: 40px;
+
+    height: 40px;
+
+    border-width: 3px;
+  }
+
+
+  /* Next Button */
+
+  .next-btn{
+
+    font-size: 16px;
+
+    padding: 12px 24px;
+
+    border-radius: 25px;
+  }
+
+
+  /* Floating Shapes */
+
+  .bg-circle,
+  .bg-circle2{
+
+    width: 70px;
+
+    height: 70px;
+  }
+
+
+  .bg-square,
+  .bg-square2{
+
+    width: 60px;
+
+    height: 60px;
+  }
+
+
+  .bg-triangle{
+
+    border-left: 45px solid transparent;
+
+    border-right: 45px solid transparent;
+
+    border-bottom: 80px solid #d8c0e4;
+  }
+
+}
+
+
+/* ============================= */
+/* SMALL MOBILE DEVICES */
+/* ============================= */
+
+@media(max-width:480px){
+
+  .coloring-container{
+
+    font-size: 1.2rem;
+  }
+
+
+  /* Shape Area */
+
+  .shape-area{
+
+    max-width: 260px;
+  }
+
+
+  /* Color Buttons */
+
+  .color{
+
+    width: 34px;
+
+    height: 34px;
+  }
+
+
+  /* Next Button */
+
+  .next-btn{
+
+    width: 100%;
+
+    max-width: 220px;
+  }
+
+
+  /* Floating Shapes */
+
+  .bg-circle,
+  .bg-circle2{
+
+    width: 50px;
+
+    height: 50px;
+  }
+
+
+  .bg-square,
+  .bg-square2{
+
+    width: 45px;
+
+    height: 45px;
+  }
+
+}

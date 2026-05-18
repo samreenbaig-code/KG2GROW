@@ -1,0 +1,159 @@
+<!-- ============================= -->
+<!-- MATH BACKGROUND -->
+<!-- Decorative floating shapes -->
+<!-- ============================= -->
+
+<div class="math-background">
+
+
+  <!-- ============================= -->
+  <!-- FLOATING SHAPES -->
+  <!-- Animated background shapes -->
+  <!-- ============================= -->
+
+  <span class="shape circle"></span>
+
+  <span class="shape square"></span>
+
+  <span class="shape triangle"></span>
+
+  <span class="shape circle2"></span>
+
+  <span class="shape square2"></span>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- MATH GAME CONTAINER -->
+<!-- Main simple math game -->
+<!-- ============================= -->
+
+<div class="math-game">
+
+
+  <!-- ============================= -->
+  <!-- GAME TITLE -->
+  <!-- ============================= -->
+
+  <h2 class="title">
+
+    Simple Math Fun
+
+  </h2>
+
+
+  <!-- ============================= -->
+  <!-- MATH QUESTION -->
+  <!-- Display math equation -->
+  <!-- ============================= -->
+
+  <div class="question">
+
+
+    <!-- FIRST NUMBER -->
+
+    <span class="num">
+
+      {{num1}}
+
+    </span>
+
+
+    <!-- MATH OPERATOR -->
+
+    <span class="operator">
+
+      {{operator}}
+
+    </span>
+
+
+    <!-- SECOND NUMBER -->
+
+    <span class="num">
+
+      {{num2}}
+
+    </span>
+
+
+    <!-- EQUAL SIGN -->
+
+    <span class="equal">
+
+      =
+
+    </span>
+
+
+    <!-- ANSWER AREA -->
+    <!-- Show answer or question mark -->
+
+    <span class="answer">
+
+      {{ showAnswer ? correctAnswer : '?' }}
+
+    </span>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- ANSWER BUTTONS -->
+  <!-- Multiple choice answers -->
+  <!-- ============================= -->
+
+  <div class="answers">
+
+
+    <!-- ============================= -->
+    <!-- SINGLE ANSWER BUTTON -->
+    <!-- Click to check answer -->
+    <!-- ============================= -->
+
+    <button 
+
+      *ngFor="let opt of options"
+
+      (click)="checkAnswer(opt)"
+
+      class="answer-btn">
+
+      {{opt}}
+
+    </button>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- RESULT MESSAGE -->
+  <!-- Show correct/wrong answer -->
+  <!-- ============================= -->
+
+  <p class="result">
+
+    {{message}}
+
+  </p>
+
+
+  <!-- ============================= -->
+  <!-- NEXT BUTTON -->
+  <!-- Open next math question -->
+  <!-- ============================= -->
+
+  <button
+
+    *ngIf="message === 'Great job! 🎉'"
+
+    (click)="nextQuestion()"
+
+    class="next-btn">
+
+    Next ➜
+
+  </button>
+
+</div>

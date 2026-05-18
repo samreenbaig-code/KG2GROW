@@ -1,0 +1,41 @@
+<!-- ============================= -->
+<!-- TOP BAR -->
+<!-- Contains Back + Music buttons -->
+<!-- ============================= -->
+
+<div class="top-bar">
+
+
+  <!-- ============================= -->
+  <!-- BACK BUTTON -->
+  <!-- Go to previous page -->
+  <!-- ============================= -->
+
+  <button (click)="goBack()">
+
+    ⬅️ Back
+
+  </button>
+
+
+  <!-- ============================= -->
+  <!-- MUSIC BUTTON -->
+  <!-- Toggle background music -->
+  <!-- ============================= -->
+
+  <button (click)="toggleMusic()">
+
+
+    <!-- ============================= -->
+    <!-- MUSIC STATUS TEXT -->
+    <!-- Changes based on music state -->
+    <!-- ============================= -->
+
+    {{ musicPlaying
+      ? '🔇 Music Off'
+      : '🔊 Music On'
+    }}
+
+  </button>
+
+</div>

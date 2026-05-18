@@ -1,0 +1,189 @@
+<!-- ============================= -->
+<!-- GAME PAGE -->
+<!-- Main drag letter game -->
+<!-- ============================= -->
+
+<div class="game-page">
+
+
+  <!-- ============================= -->
+  <!-- FLOATING BUBBLES -->
+  <!-- Decorative background animation -->
+  <!-- ============================= -->
+
+  <div class="bubbles">
+
+
+    <!-- Bubble 1 -->
+    <span></span>
+
+    <!-- Bubble 2 -->
+    <span></span>
+
+    <!-- Bubble 3 -->
+    <span></span>
+
+    <!-- Bubble 4 -->
+    <span></span>
+
+    <!-- Bubble 5 -->
+    <span></span>
+
+    <!-- Bubble 6 -->
+    <span></span>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- GAME CARD -->
+  <!-- Main game content -->
+  <!-- ============================= -->
+
+  <div class="game-card">
+
+
+    <!-- ============================= -->
+    <!-- GAME TITLE -->
+    <!-- ============================= -->
+
+    <h1>
+
+      🧠 Drag Missing Letter
+
+    </h1>
+
+
+    <!-- ============================= -->
+    <!-- EMOJI DISPLAY -->
+    <!-- Show current object emoji -->
+    <!-- ============================= -->
+
+    <div class="emoji">
+
+      {{ current.emoji }}
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- WORD DISPLAY -->
+    <!-- Missing letter challenge -->
+    <!-- ============================= -->
+
+    <div class="word">
+
+
+      <!-- ============================= -->
+      <!-- FIRST LETTER -->
+      <!-- Show first character -->
+      <!-- ============================= -->
+
+      <span>
+
+        {{ current.word[0] }}
+
+      </span>
+
+
+      <!-- ============================= -->
+      <!-- DROP AREA -->
+      <!-- Drag missing letter here -->
+      <!-- ============================= -->
+
+      <span
+
+        class="blank"
+
+        (drop)="drop($event)"
+
+        (dragover)="allowDrop($event)">
+
+
+        <!-- Show dropped letter -->
+
+        {{ draggedLetter && showNextBtn
+          ? draggedLetter
+          : '_' }}
+
+      </span>
+
+
+      <!-- ============================= -->
+      <!-- REMAINING LETTERS -->
+      <!-- Show remaining word -->
+      <!-- ============================= -->
+
+      <span>
+
+        {{ current.word.slice(2) }}
+
+      </span>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- LETTER OPTIONS -->
+    <!-- Draggable letters -->
+    <!-- ============================= -->
+
+    <div class="letters">
+
+
+      <!-- ============================= -->
+      <!-- SINGLE LETTER -->
+      <!-- Drag this letter -->
+      <!-- ============================= -->
+
+      <div
+
+        class="letter"
+
+        *ngFor="let letter of current.options"
+
+        draggable="true"
+
+        (dragstart)="drag(letter)">
+
+
+        {{ letter }}
+
+      </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- RESULT MESSAGE -->
+    <!-- Show correct/wrong answer -->
+    <!-- ============================= -->
+
+    <p class="message">
+
+      {{ message }}
+
+    </p>
+
+
+    <!-- ============================= -->
+    <!-- NEXT BUTTON -->
+    <!-- Open next question -->
+    <!-- ============================= -->
+
+    <button
+
+      *ngIf="showNextBtn"
+
+      (click)="next()"
+
+      class="next-btn">
+
+
+      ➡️ Next
+
+    </button>
+
+  </div>
+
+</div>

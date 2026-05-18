@@ -1,0 +1,89 @@
+<!-- ============================= -->
+<!-- ACCOUNT PAGE CONTAINER -->
+<!-- ============================= -->
+
+<div class="account-container">
+
+
+  <!-- ============================= -->
+  <!-- BACKGROUND VIDEO -->
+  <!-- autoplay   = video starts automatically -->
+  <!-- muted      = video has no sound -->
+  <!-- loop       = repeats forever -->
+  <!-- playsinline = works on mobile -->
+  <!-- ============================= -->
+
+  <video autoplay muted loop playsinline class="bg-video">
+
+    <!-- Video Source -->
+    <source src="accountbg.mp4" type="video/mp4">
+
+  </video>
+
+
+  <!-- ============================= -->
+  <!-- DARK OVERLAY -->
+  <!-- Adds better readability -->
+  <!-- ============================= -->
+
+  <div class="overlay"></div>
+
+
+  <!-- ============================= -->
+  <!-- PAGE TITLE -->
+  <!-- ============================= -->
+
+  <h1 class="title">
+
+    Who is using Clever Clubs?
+
+  </h1>
+
+
+  <!-- ============================= -->
+  <!-- CARD WRAPPER -->
+  <!-- Holds both Parent & Kid cards -->
+  <!-- ============================= -->
+
+  <div class="card-wrapper">
+
+
+    <!-- ============================= -->
+    <!-- PARENT CARD -->
+    <!-- ============================= -->
+
+    <div class="account-card parent" (click)="selectParent()">
+
+      <!-- Parent Icon -->
+      <div class="icon">👨‍👩‍👧</div>
+
+      <!-- Parent Title -->
+      <h2>Parent</h2>
+
+      <!-- Parent Description -->
+      <p>Manage progress & settings</p>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- KID CARD -->
+    <!-- ============================= -->
+
+    <div class="account-card kid" (click)="selectKid()">
+
+      <!-- Kid Icon -->
+      <div class="icon">🧒</div>
+
+      <!-- Kid Title -->
+      <h2>Kid</h2>
+
+      <!-- Kid Description -->
+      <p>Start Learning & Playing</p>
+
+    </div>
+
+
+  </div>
+
+</div>

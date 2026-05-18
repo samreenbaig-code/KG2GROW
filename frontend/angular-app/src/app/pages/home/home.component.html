@@ -1,0 +1,60 @@
+ 
+  <!-- ============================= -->
+<!-- FULL SCREEN VIDEO CONTAINER -->
+<!-- ============================= -->
+
+<div class="video-container">
+
+  <!-- ============================= -->
+  <!-- BACKGROUND VIDEO -->
+  <!-- autoplay  = video starts automatically -->
+  <!-- muted     = no sound -->
+  <!-- loop      = repeat forever -->
+  <!-- playsinline = works properly on mobile -->
+  <!-- ============================= -->
+
+  <video autoplay muted loop playsinline class="bg-video">
+
+    <!-- Video File -->
+    <source src="/home.mp4" type="video/mp4">
+
+  </video>
+
+
+  <!-- ============================= -->
+  <!-- CONTENT SECTION -->
+  <!-- This section stays above video -->
+  <!-- ============================= -->
+
+  <div class="content">
+
+
+    <!-- ============================= -->
+    <!-- GET STARTED BUTTON -->
+    <!-- Calls startApp() function -->
+    <!-- ============================= -->
+
+    <button class="start-btn" (click)="startApp()">
+
+      Get Started
+
+    </button>
+
+  </div>
+
+</div>
+<!-- ============================= -->
+<!-- FOOTER -->
+<!-- ============================= -->
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <p class="copyright">
+      © 2026 KG2Grow
+    </p>
+
+  </div>
+
+</footer>

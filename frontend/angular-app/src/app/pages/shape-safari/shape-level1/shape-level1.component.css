@@ -1,0 +1,435 @@
+/* ============================= */
+/* SHAPE LEARN PAGE */
+/* ============================= */
+
+.shape-learn{
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 20px;
+
+  overflow-x: hidden;
+
+
+  /* Background */
+
+  background:
+  linear-gradient(
+    rgba(255,255,255,0.8),
+    rgba(255,255,255,0.8)
+  ),
+  url('/shapebg.png');
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+}
+
+
+/* ============================= */
+/* PAGE TITLE */
+/* ============================= */
+
+.shape-learn h1{
+
+  font-size: 3.4rem;
+
+  color: #2f01af;
+
+  margin-bottom: 20px;
+}
+
+
+/* ============================= */
+/* SHAPE BUTTONS CONTAINER */
+/* ============================= */
+
+.shapes{
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 70px;
+
+  flex-wrap: wrap;
+
+  margin-top: 60px;
+}
+
+
+/* ============================= */
+/* SHAPE IMAGE */
+/* ============================= */
+
+.shape-img{
+
+  width: 250px;
+
+  max-width: 100%;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+/* Hover */
+
+.shape-img:hover{
+
+  transform: scale(1.2);
+}
+
+
+/* ============================= */
+/* SHAPE HOVER */
+/* ============================= */
+
+.shape:hover{
+
+  transform: scale(1.2);
+}
+
+
+/* ============================= */
+/* SHAPES */
+/* ============================= */
+
+.circle{
+
+  background: #ff6b6b;
+
+  border-radius: 50%;
+}
+
+
+.square{
+
+  background: #4ecdc4;
+}
+
+
+.triangle{
+
+  width: 0;
+
+  height: 0;
+
+  border-left: 60px solid transparent;
+
+  border-right: 60px solid transparent;
+
+  border-bottom: 120px solid #ffd93d;
+}
+
+
+.star{
+
+  font-size: 100px;
+
+  color: #ff9f1c;
+}
+
+
+.heart{
+
+  font-size: 100px;
+
+  color: #ff4fa3;
+}
+
+
+/* ============================= */
+/* POPUP OVERLAY */
+/* ============================= */
+
+.popup{
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: rgba(0,0,0,0.4);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 15px;
+
+  z-index: 100;
+}
+
+
+/* ============================= */
+/* POPUP CARD */
+/* ============================= */
+
+.card{
+
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  width: 350px;
+
+  max-width: 100%;
+
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+
+  animation: pop .3s ease;
+}
+
+
+/* ============================= */
+/* SHAPE IMAGE */
+/* ============================= */
+
+.shape-image{
+
+  width: 200px;
+
+  max-width: 100%;
+
+  margin: 20px 0;
+}
+
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+button{
+
+  background: #ff5fa2;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 25px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  transition: 0.2s ease;
+}
+
+
+/* Hover */
+
+button:hover{
+
+  transform: scale(1.05);
+}
+
+
+/* ============================= */
+/* POP ANIMATION */
+/* ============================= */
+
+@keyframes pop{
+
+  0%{
+
+    transform: scale(.5);
+  }
+
+  100%{
+
+    transform: scale(1);
+  }
+
+}
+
+
+/* ============================= */
+/* TABLET RESPONSIVE */
+/* ============================= */
+
+@media(max-width:992px){
+
+  .shape-learn h1{
+
+    font-size: 2.8rem;
+  }
+
+  .shape-img{
+
+    width: 200px;
+  }
+
+  .shapes{
+
+    gap: 40px;
+  }
+
+}
+
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media(max-width:768px){
+
+  .shape-learn{
+
+    justify-content: flex-start;
+
+    padding-top: 100px;
+  }
+
+
+  /* Title */
+
+  .shape-learn h1{
+
+    font-size: 2rem;
+
+    line-height: 1.3;
+  }
+
+
+  /* Shape Container */
+
+  .shapes{
+
+    gap: 25px;
+
+    margin-top: 35px;
+  }
+
+
+  /* Shape Images */
+
+  .shape-img{
+
+    width: 130px;
+  }
+
+
+  /* Shapes */
+
+  .star,
+  .heart{
+
+    font-size: 70px;
+  }
+
+
+  .triangle{
+
+    border-left: 40px solid transparent;
+
+    border-right: 40px solid transparent;
+
+    border-bottom: 80px solid #ffd93d;
+  }
+
+
+  /* Popup Card */
+
+  .card{
+
+    padding: 25px;
+
+    border-radius: 18px;
+  }
+
+
+  /* Popup Image */
+
+  .shape-image{
+
+    width: 130px;
+  }
+
+
+  /* Button */
+
+  button{
+
+    font-size: 16px;
+
+    padding: 10px 18px;
+  }
+
+}
+
+
+/* ============================= */
+/* SMALL MOBILE DEVICES */
+/* ============================= */
+
+@media(max-width:480px){
+
+  .shape-learn h1{
+
+    font-size: 1.6rem;
+  }
+
+
+  /* Shape Images */
+
+  .shape-img{
+
+    width: 100px;
+  }
+
+
+  /* Popup */
+
+  .card{
+
+    width: 90%;
+
+    padding: 20px;
+  }
+
+
+  /* Shape Image */
+
+  .shape-image{
+
+    width: 100px;
+  }
+
+
+  /* Shapes */
+
+  .star,
+  .heart{
+
+    font-size: 55px;
+  }
+
+}

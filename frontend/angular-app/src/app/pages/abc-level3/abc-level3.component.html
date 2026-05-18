@@ -1,0 +1,171 @@
+<!-- ============================= -->
+<!-- TRACE LETTER CONTAINER -->
+<!-- Main tracing game section -->
+<!-- ============================= -->
+
+<div class="trace-container">
+
+
+  <!-- ============================= -->
+  <!-- PAGE TITLE -->
+  <!-- ============================= -->
+
+  <h2>
+
+    Trace the Letter
+
+  </h2>
+
+
+  <!-- ============================= -->
+  <!-- CURRENT LETTER -->
+  <!-- Displays active tracing letter -->
+  <!-- ============================= -->
+
+  <h2 class="letter-title">
+
+    {{ letters[current] }}
+
+  </h2>
+
+
+  <!-- ============================= -->
+  <!-- INSTRUCTION TEXT -->
+  <!-- Guides the player -->
+  <!-- ============================= -->
+
+  <p class="instruction">
+
+    Follow the dotted letter!
+
+  </p>
+
+
+  <!-- ============================= -->
+  <!-- COLOR PICKER -->
+  <!-- Select drawing color -->
+  <!-- ============================= -->
+
+  <div class="colors">
+
+
+    <!-- ============================= -->
+    <!-- RED COLOR -->
+    <!-- ============================= -->
+
+    <div
+      class="color red"
+      (click)="setColor('#ff3b30')">
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- BLUE COLOR -->
+    <!-- ============================= -->
+
+    <div
+      class="color blue"
+      (click)="setColor('#007aff')">
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- GREEN COLOR -->
+    <!-- ============================= -->
+
+    <div
+      class="color green"
+      (click)="setColor('#34c759')">
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- YELLOW COLOR -->
+    <!-- ============================= -->
+
+    <div
+      class="color yellow"
+      (click)="setColor('#ffcc00')">
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- PURPLE COLOR -->
+    <!-- ============================= -->
+
+    <div
+      class="color purple"
+      (click)="setColor('#af52de')">
+    </div>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- DRAWING AREA -->
+  <!-- User traces the letter here -->
+  <!-- ============================= -->
+
+  <canvas
+
+    #canvas
+
+    width="500"
+
+    height="350"
+
+    (mousedown)="startDraw($event)"
+
+    (mousemove)="draw($event)"
+
+    (mouseup)="stopDraw()"
+
+    (touchstart)="startDraw($event)"
+
+    (touchmove)="draw($event)"
+
+    (touchend)="stopDraw()"
+
+  >
+
+  </canvas>
+
+
+  <!-- ============================= -->
+  <!-- NEXT LETTER BUTTON -->
+  <!-- Moves to next tracing letter -->
+  <!-- ============================= -->
+
+  <button
+    class="next-btn"
+    (click)="nextLetter()">
+
+    Next Letter
+
+  </button>
+
+
+  <!-- ============================= -->
+  <!-- STAR REWARD EFFECT -->
+  <!-- Appears after success -->
+  <!-- ============================= -->
+
+  <div class="stars" *ngIf="showStars">
+
+    ⭐ ⭐ ⭐
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- CONFETTI EFFECT -->
+  <!-- Celebration animation -->
+  <!-- ============================= -->
+
+  <div class="confetti" *ngIf="showConfetti">
+
+    🎉 🎉 🎉
+
+  </div>
+
+</div>

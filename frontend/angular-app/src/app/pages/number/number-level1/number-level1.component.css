@@ -1,0 +1,120 @@
+/* Full page background */
+.number-game{
+  min-height:100vh;
+  padding:40px;
+  text-align:center;
+
+  background-image:url('/number1bg.png'); /* your background image */
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+/* Optional glass card effect */
+.number-game::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,0.75);
+  backdrop-filter: blur(4px);
+  z-index:-1;
+}
+
+/* Title */
+.number-game h2{
+  font-size:70px;
+  color: #17791a;
+  margin-top:220px;
+}
+
+/* Big instruction text */
+.number-display{
+  font-size:100px;
+  color:#ff5722;
+  margin:30px 0;
+  font-weight:bold;
+}
+
+/* Grid for numbers */
+.numbers-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:20px;
+  max-width:600px;
+  margin:auto;
+}
+
+/* Number buttons */
+.number-btn{
+  padding:20px;
+  font-size:22px;
+  border:none;
+  border-radius:16px;
+  background:#4CAF50;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+/* Hover animation */
+.number-btn:hover{
+  background:#43a047;
+  transform:scale(1.1);
+}
+/* popup background */
+
+/* overlay */
+.popup{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* card with background image */
+
+.popup-card{
+  width:500px;
+  height:500px;
+
+  border-radius:25px;
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:30px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* number on top */
+
+.number-title{
+  font-size:70px;
+  color:white;
+  text-shadow:2px 2px 8px black;
+}
+
+/* close button */
+
+.close-btn{
+  background:#ff5722;
+  color:white;
+  border:none;
+  padding:12px 30px;
+  border-radius:15px;
+  font-size:18px;
+  cursor:pointer;
+}

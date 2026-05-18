@@ -1,0 +1,672 @@
+/* ============================= */
+/* RESET */
+/* ============================= */
+
+*{
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* MAIN GAME PAGE */
+/* ============================= */
+
+.game-page{
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  position: relative;
+
+  padding: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #89f7fe,
+    #66a6ff
+  );
+
+  font-family: 'Comic Sans MS';
+}
+
+
+/* ============================= */
+/* GAME CARD */
+/* ============================= */
+
+.game-card{
+
+  width: 550px;
+
+  max-width: 100%;
+
+  padding: 40px;
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.2);
+
+  backdrop-filter: blur(10px);
+
+  text-align: center;
+
+  z-index: 2;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+h1{
+
+  color: white;
+
+  font-size: 42px;
+
+  margin-bottom: 20px;
+
+  line-height: 1.3;
+}
+
+
+/* ============================= */
+/* EMOJI */
+/* ============================= */
+
+.emoji{
+
+  font-size: 100px;
+
+  margin-bottom: 20px;
+}
+
+
+/* ============================= */
+/* WORD AREA */
+/* ============================= */
+
+.word{
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 20px;
+
+  color: white;
+
+  font-size: 55px;
+
+  font-weight: bold;
+
+  margin-bottom: 40px;
+
+  flex-wrap: wrap;
+}
+
+
+/* ============================= */
+/* DROP AREA */
+/* ============================= */
+
+.drop-box{
+
+  width: 90px;
+
+  height: 90px;
+
+  border: 5px dashed white;
+
+  border-radius: 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: rgba(255,255,255,0.2);
+
+  font-size: 40px;
+}
+
+
+/* ============================= */
+/* LETTERS AREA */
+/* ============================= */
+
+.letters{
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+
+/* ============================= */
+/* LETTER CARD */
+/* ============================= */
+
+.letter{
+
+  width: 90px;
+
+  height: 90px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 40px;
+
+  font-weight: bold;
+
+  cursor: grab;
+
+  transition: 0.3s;
+
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+
+/* Hover */
+
+.letter:hover{
+
+  transform: scale(1.1);
+
+  background: #ffeb3b;
+}
+
+
+/* ============================= */
+/* MESSAGE */
+/* ============================= */
+
+.message{
+
+  margin-top: 30px;
+
+  color: white;
+
+  font-size: 35px;
+
+  font-weight: bold;
+}
+
+
+/* ============================= */
+/* NEXT BUTTON */
+/* ============================= */
+
+.next-btn{
+
+  margin-top: 20px;
+
+  padding: 15px 40px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: #ff9800;
+
+  color: white;
+
+  font-size: 24px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* Hover */
+
+.next-btn:hover{
+
+  transform: scale(1.1);
+}
+
+
+/* ============================= */
+/* FLOATING BUBBLES */
+/* ============================= */
+
+.bubbles{
+
+  position: absolute;
+
+  width: 100%;
+
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+/* Bubble */
+
+.bubbles span{
+
+  position: absolute;
+
+  bottom: -150px;
+
+  border-radius: 50%;
+
+  animation: float 15s infinite linear;
+
+  opacity: 0.3;
+}
+
+
+/* ============================= */
+/* BUBBLE STYLES */
+/* ============================= */
+
+.bubbles span:nth-child(1){
+
+  left: 10%;
+
+  width: 80px;
+
+  height: 80px;
+
+  background: #ff9ecf;
+}
+
+.bubbles span:nth-child(2){
+
+  left: 25%;
+
+  width: 120px;
+
+  height: 120px;
+
+  background: #ffd166;
+
+  animation-duration: 18s;
+}
+
+.bubbles span:nth-child(3){
+
+  left: 45%;
+
+  width: 70px;
+
+  height: 70px;
+
+  background: #8ec5ff;
+
+  animation-duration: 12s;
+}
+
+.bubbles span:nth-child(4){
+
+  left: 60%;
+
+  width: 150px;
+
+  height: 150px;
+
+  background: #baffc9;
+
+  animation-duration: 20s;
+}
+
+.bubbles span:nth-child(5){
+
+  left: 80%;
+
+  width: 90px;
+
+  height: 90px;
+
+  background: #ffc6ff;
+
+  animation-duration: 14s;
+}
+
+.bubbles span:nth-child(6){
+
+  left: 90%;
+
+  width: 110px;
+
+  height: 110px;
+
+  background: #fdffb6;
+
+  animation-duration: 22s;
+}
+
+
+/* ============================= */
+/* FLOAT ANIMATION */
+/* ============================= */
+
+@keyframes float{
+
+  0%{
+
+    transform: translateY(0) rotate(0deg);
+
+    opacity: 0;
+  }
+
+  50%{
+
+    opacity: 0.4;
+  }
+
+  100%{
+
+    transform: translateY(-1200px) rotate(720deg);
+
+    opacity: 0;
+  }
+}
+
+
+/* ============================= */
+/* BLANK SPACE */
+/* ============================= */
+
+.blank{
+
+  display: inline-flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  width: 80px;
+
+  height: 80px;
+
+  border-bottom: 6px solid white;
+
+  font-size: 55px;
+
+  font-weight: bold;
+
+  color: #ffeb3b;
+
+  margin: 0 10px;
+}
+
+
+/* ============================= */
+/* TABLET RESPONSIVE */
+/* ============================= */
+
+@media(max-width:992px){
+
+  .game-card{
+
+    width: 90%;
+  }
+
+  h1{
+
+    font-size: 34px;
+  }
+
+  .word{
+
+    font-size: 45px;
+  }
+
+}
+
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media(max-width:768px){
+
+  .game-page{
+
+    padding: 90px 15px 30px;
+
+    align-items: flex-start;
+  }
+
+
+  /* Card */
+
+  .game-card{
+
+    width: 100%;
+
+    padding: 25px;
+
+    border-radius: 25px;
+  }
+
+
+  /* Title */
+
+  h1{
+
+    font-size: 26px;
+  }
+
+
+  /* Emoji */
+
+  .emoji{
+
+    font-size: 70px;
+  }
+
+
+  /* Word */
+
+  .word{
+
+    font-size: 30px;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+  }
+
+
+  /* Drop Box */
+
+  .drop-box{
+
+    width: 65px;
+
+    height: 65px;
+
+    border-width: 3px;
+
+    font-size: 28px;
+
+    border-radius: 15px;
+  }
+
+
+  /* Letters */
+
+  .letters{
+
+    gap: 12px;
+  }
+
+
+  /* Letter */
+
+  .letter{
+
+    width: 65px;
+
+    height: 65px;
+
+    font-size: 28px;
+
+    border-radius: 15px;
+  }
+
+
+  /* Blank */
+
+  .blank{
+
+    width: 60px;
+
+    height: 60px;
+
+    font-size: 35px;
+
+    margin: 0 5px;
+  }
+
+
+  /* Message */
+
+  .message{
+
+    font-size: 22px;
+
+    margin-top: 20px;
+  }
+
+
+  /* Button */
+
+  .next-btn{
+
+    font-size: 18px;
+
+    padding: 12px 25px;
+  }
+
+}
+
+
+/* ============================= */
+/* SMALL MOBILE DEVICES */
+/* ============================= */
+
+@media(max-width:480px){
+
+  .game-card{
+
+    padding: 18px;
+  }
+
+
+  /* Title */
+
+  h1{
+
+    font-size: 22px;
+  }
+
+
+  /* Emoji */
+
+  .emoji{
+
+    font-size: 55px;
+  }
+
+
+  /* Word */
+
+  .word{
+
+    font-size: 24px;
+  }
+
+
+  /* Drop Box */
+
+  .drop-box{
+
+    width: 55px;
+
+    height: 55px;
+
+    font-size: 24px;
+  }
+
+
+  /* Letter */
+
+  .letter{
+
+    width: 55px;
+
+    height: 55px;
+
+    font-size: 24px;
+  }
+
+
+  /* Blank */
+
+  .blank{
+
+    width: 50px;
+
+    height: 50px;
+
+    font-size: 28px;
+  }
+
+
+  /* Message */
+
+  .message{
+
+    font-size: 18px;
+  }
+
+
+  /* Button */
+
+  .next-btn{
+
+    width: 100%;
+
+    max-width: 220px;
+
+    font-size: 16px;
+  }
+
+}

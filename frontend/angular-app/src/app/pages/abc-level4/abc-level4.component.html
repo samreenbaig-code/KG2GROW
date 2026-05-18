@@ -1,0 +1,142 @@
+<!-- ============================= -->
+<!-- WORD GAME CONTAINER -->
+<!-- Main spelling game section -->
+<!-- ============================= -->
+
+<div class="word-container">
+
+
+  <!-- ============================= -->
+  <!-- PAGE TITLE -->
+  <!-- ============================= -->
+
+  <h2>
+
+    Spell the Word
+
+  </h2>
+
+
+  <!-- ============================= -->
+  <!-- WORD IMAGE -->
+  <!-- Shows current word picture -->
+  <!-- ============================= -->
+
+  <img
+
+    [src]="words[current].image"
+
+    class="word-image"
+
+  />
+
+
+  <!-- ============================= -->
+  <!-- CONFETTI EFFECT -->
+  <!-- Celebration animation -->
+  <!-- ============================= -->
+
+  <div class="confetti" *ngIf="showConfetti">
+
+    🎉 🎉 🎉 🎉 🎉
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- ANSWER SLOTS -->
+  <!-- User drops letters here -->
+  <!-- ============================= -->
+
+  <div class="answer" [class.shake]="wrongAnswer">
+
+
+    <!-- ============================= -->
+    <!-- SINGLE SLOT -->
+    <!-- ============================= -->
+
+    <div
+
+      class="slot"
+
+      *ngFor="let slot of answer; let i = index"
+
+      (dragover)="allowDrop($event)"
+
+      (drop)="dropLetter($event,i)"
+
+      (touchmove)="touchMove($event)"
+
+      (touchend)="touchDrop(i)"
+    >
+
+      {{slot}}
+
+    </div>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- LETTER OPTIONS -->
+  <!-- Draggable letters -->
+  <!-- ============================= -->
+
+  <div class="letters">
+
+
+    <!-- ============================= -->
+    <!-- SINGLE LETTER -->
+    <!-- ============================= -->
+
+    <div
+
+      class="letter"
+
+      *ngFor="let letter of letters"
+
+      draggable="true"
+
+      (dragstart)="dragStart(letter)"
+
+      (touchstart)="touchStart(letter)"
+    >
+
+      {{letter}}
+
+    </div>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- NAVIGATION BUTTONS -->
+  <!-- ============================= -->
+
+  <div class="navigation">
+
+
+    <!-- Previous Button -->
+
+    <button
+      class="nav-btn prev"
+      (click)="previousWord()">
+
+      ⬅ Previous
+
+    </button>
+
+
+    <!-- Next Button -->
+
+    <button
+      class="nav-btn next"
+      (click)="nextWord()">
+
+      Next ➡
+
+    </button>
+
+  </div>
+
+</div>

@@ -1,0 +1,171 @@
+<!-- ============================= -->
+<!-- GAME CONTAINER -->
+<!-- Main counting game section -->
+<!-- ============================= -->
+
+<div class="game-container">
+
+
+  <!-- ============================= -->
+  <!-- BACKGROUND DECOR -->
+  <!-- Floating bubbles and clouds -->
+  <!-- ============================= -->
+
+  <div class="background-decor">
+
+
+    <!-- ============================= -->
+    <!-- FLOATING BUBBLES -->
+    <!-- Animated background bubbles -->
+    <!-- ============================= -->
+
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+
+
+    <!-- ============================= -->
+    <!-- CLOUD IMAGES -->
+    <!-- Decorative cloud background -->
+    <!-- ============================= -->
+
+    <img src="/cloud.png" class="cloud cloud1">
+
+    <img src="/cloud1.png" class="cloud cloud2">
+
+    <img src="/cloud2.png" class="cloud cloud3">
+
+    <img src="/cloud3.png" class="cloud cloud4">
+
+    <img src="/cloud4.png" class="cloud cloud5">
+
+    <img src="/cloud5.png" class="cloud cloud6">
+
+    <img src="/cloud6.png" class="cloud cloud7">
+
+    <img src="/cloud7.png" class="cloud cloud8">
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- COUNT GAME CONTENT -->
+  <!-- Main gameplay area -->
+  <!-- ============================= -->
+
+  <div class="count-game">
+
+
+    <!-- ============================= -->
+    <!-- GAME TITLE -->
+    <!-- ============================= -->
+
+    <h2>
+
+      Count the Objects
+
+    </h2>
+
+
+    <!-- ============================= -->
+    <!-- OBJECT IMAGES -->
+    <!-- Display objects to count -->
+    <!-- ============================= -->
+
+    <img 
+
+      *ngFor="let obj of objects"
+
+      [src]="'/' + currentObject + '.png'"
+
+      class="object-img">
+
+
+    <!-- ============================= -->
+    <!-- ANSWER BUTTONS -->
+    <!-- Number choices -->
+    <!-- ============================= -->
+
+    <div class="answers">
+
+
+      <!-- ============================= -->
+      <!-- SINGLE ANSWER BUTTON -->
+      <!-- Click to check answer -->
+      <!-- ============================= -->
+
+      <button
+
+        *ngFor="let num of options"
+
+        (click)="checkAnswer(num)"
+
+        class="answer-btn">
+
+        {{num}}
+
+      </button>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- RESULT MESSAGE -->
+    <!-- Show correct/wrong answer -->
+    <!-- ============================= -->
+
+    <p class="result">
+
+      {{message}}
+
+    </p>
+
+
+    <!-- ============================= -->
+    <!-- STAR CELEBRATION -->
+    <!-- Show stars on success -->
+    <!-- ============================= -->
+
+    <div
+      *ngIf="showStars"
+
+      class="stars">
+
+
+      <span class="star">⭐</span>
+
+      <span class="star">⭐</span>
+
+      <span class="star">⭐</span>
+
+      <span class="star">⭐</span>
+
+      <span class="star">⭐</span>
+
+      <span class="star">⭐</span>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- NEXT BUTTON -->
+    <!-- Open next counting game -->
+    <!-- ============================= -->
+
+    <button 
+
+      *ngIf="message === 'Great job! 🎉'"
+
+      class="next-btn"
+
+      (click)="nextGame()">
+
+      Next ➜
+
+    </button>
+
+  </div>
+
+</div>

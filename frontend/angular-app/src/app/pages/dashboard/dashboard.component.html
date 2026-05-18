@@ -1,0 +1,126 @@
+<!-- ============================= -->
+<!-- DASHBOARD CONTAINER -->
+<!-- Main dashboard section -->
+<!-- ============================= -->
+
+<div class="dashboard">
+
+
+  <!-- ============================= -->
+  <!-- SECTION TITLE -->
+  <!-- ============================= -->
+
+  <h3 class="section-title">
+
+    Choose Your Adventure
+
+  </h3>
+
+
+  <!-- ============================= -->
+  <!-- GAME CARD SLIDER -->
+  <!-- Holds all learning game cards -->
+  <!-- ============================= -->
+
+  <div class="card-slider">
+
+
+    <!-- ============================= -->
+    <!-- ABC ADVENTURE CARD -->
+    <!-- Opens ABC learning page -->
+    <!-- ============================= -->
+
+    <div class="card" (click)="goToPage('abc')">
+
+      <!-- Game Image -->
+      <img src="abc.png" alt="ABC Adventure">
+
+      <!-- Game Title -->
+      <h4>ABC Adventure</h4>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- NUMBER NINJAS CARD -->
+    <!-- Opens Number learning game -->
+    <!-- ============================= -->
+
+    <div class="card" (click)="openNumber()">
+
+      <!-- Game Image -->
+      <img src="numbers.png" alt="Number Ninjas">
+
+      <!-- Game Title -->
+      <h4>Number Ninjas</h4>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- SHAPE SAFARI CARD -->
+    <!-- Opens Shape learning game -->
+    <!-- ============================= -->
+
+    <div class="card" (click)="goToPage('shape-safari')">
+
+      <!-- Game Image -->
+      <img src="/shapes.png" alt="Shape Safari">
+
+      <!-- Game Title -->
+      <h4>Shape Safari</h4>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- COLOR QUEST CARD -->
+    <!-- Opens Color learning activity -->
+    <!-- ============================= -->
+
+    <div class="card" (click)="goToColorQuest()">
+
+      <!-- Game Image -->
+      <img src="/color.png" alt="Color Quest">
+
+      <!-- Game Title -->
+      <h4>Color Quest</h4>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- MEMORY MATCH CARD -->
+    <!-- Opens memory matching game -->
+    <!-- ============================= -->
+
+    <div class="card" (click)="goToMemoryMatch()">
+
+      <!-- Game Image -->
+      <img src="/memory.png" alt="Memory Match">
+
+      <!-- Game Title -->
+      <h4>Memory Match</h4>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- PUZZLE PARTY CARD -->
+    <!-- Opens puzzle game -->
+    <!-- ============================= -->
+
+    <div class="card" (click)="goToPage('puzzle')">
+
+      <!-- Game Image -->
+      <img src="puzzle.png" alt="Puzzle Party">
+
+      <!-- Game Title -->
+      <h4>Puzzle Party</h4>
+
+    </div>
+
+
+  </div>
+
+</div>

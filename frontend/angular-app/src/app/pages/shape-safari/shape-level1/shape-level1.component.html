@@ -1,0 +1,146 @@
+<!-- ============================= -->
+<!-- SHAPE LEARNING PAGE -->
+<!-- Main shape learning section -->
+<!-- ============================= -->
+
+<div class="shape-learn">
+
+
+  <!-- ============================= -->
+  <!-- PAGE TITLE -->
+  <!-- ============================= -->
+
+  <h1>
+
+    Learn a Shape
+
+  </h1>
+
+
+  <!-- ============================= -->
+  <!-- SHAPE IMAGE LIST -->
+  <!-- Click image to learn shape -->
+  <!-- ============================= -->
+
+  <div class="shapes">
+
+
+    <!-- ============================= -->
+    <!-- CIRCLE SHAPE -->
+    <!-- ============================= -->
+
+    <img
+
+      src="/circle.png"
+
+      class="shape-img"
+
+      (click)="showShape('Circle')">
+
+
+    <!-- ============================= -->
+    <!-- SQUARE SHAPE -->
+    <!-- ============================= -->
+
+    <img
+
+      src="/square.png"
+
+      class="shape-img"
+
+      (click)="showShape('Square')">
+
+
+    <!-- ============================= -->
+    <!-- TRIANGLE SHAPE -->
+    <!-- ============================= -->
+
+    <img
+
+      src="/triangle.png"
+
+      class="shape-img"
+
+      (click)="showShape('Triangle')">
+
+
+    <!-- ============================= -->
+    <!-- STAR SHAPE -->
+    <!-- ============================= -->
+
+    <img
+
+      src="/star.png"
+
+      class="shape-img"
+
+      (click)="showShape('Star')">
+
+
+    <!-- ============================= -->
+    <!-- HEART SHAPE -->
+    <!-- ============================= -->
+
+    <img
+
+      src="/heart.png"
+
+      class="shape-img"
+
+      (click)="showShape('Heart')">
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- POPUP CARD -->
+  <!-- Show selected shape -->
+  <!-- ============================= -->
+
+  <div
+
+    class="popup"
+
+    *ngIf="selectedShape">
+
+
+    <!-- ============================= -->
+    <!-- POPUP CONTENT CARD -->
+    <!-- ============================= -->
+
+    <div class="card">
+
+
+      <!-- Shape name -->
+
+      <h2>
+
+        {{selectedShape}}
+
+      </h2>
+
+
+      <!-- Shape image -->
+
+      <img
+
+        [src]="shapeImages[selectedShape]"
+
+        class="shape-image">
+
+
+      <!-- Close button -->
+
+      <button
+
+        (click)="closeCard()">
+
+        Close
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

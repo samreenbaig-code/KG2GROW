@@ -1,0 +1,356 @@
+/* ============================= */
+/* FULL BACKGROUND */
+/* ============================= */
+
+.color-bg{
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  background-image: url('/colorbg.png');
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  overflow-x: hidden;
+}
+
+
+/* ============================= */
+/* CENTER CONTENT */
+/* ============================= */
+
+.color-content{
+
+  text-align: center;
+
+  width: 100%;
+}
+
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.color-content h1{
+
+  font-size: 50px;
+
+  color: #7b2cbf;
+
+  margin-bottom: 50px;
+
+  line-height: 1.2;
+}
+
+
+/* ============================= */
+/* LEVEL ROW */
+/* ============================= */
+
+.levels{
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 60px;
+
+  flex-wrap: wrap;
+}
+
+
+/* ============================= */
+/* EACH LEVEL */
+/* ============================= */
+
+.level-item{
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+/* ============================= */
+/* CIRCLE BUTTON */
+/* ============================= */
+
+.circle{
+
+  width: 150px;
+
+  height: 150px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #c77dff,
+    #9d4edd
+  );
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 40px;
+
+  color: white;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* Hover Effect */
+
+.circle:hover{
+
+  transform: scale(1.1);
+}
+
+
+/* ============================= */
+/* TEXT UNDER BUTTON */
+/* ============================= */
+
+.level-item p{
+
+  margin-top: 10px;
+
+  font-size: 16px;
+
+  color: #333;
+}
+
+
+/* ============================= */
+/* LOCK SECTION */
+/* ============================= */
+
+.locked{
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 90px;
+
+  margin-top: 50px;
+
+  flex-wrap: wrap;
+}
+
+
+/* ============================= */
+/* LOCK STYLE */
+/* ============================= */
+
+.lock{
+
+  width: 150px;
+
+  height: 150px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #c77dff,
+    #9d4edd
+  );
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 40px;
+
+  color: white;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* Hover */
+
+.lock:hover{
+
+  transform: scale(1.05);
+}
+
+
+/* ============================= */
+/* TABLET RESPONSIVE */
+/* ============================= */
+
+@media(max-width:992px){
+
+  .color-content h1{
+
+    font-size: 40px;
+  }
+
+  .circle,
+  .lock{
+
+    width: 120px;
+
+    height: 120px;
+
+    font-size: 34px;
+  }
+
+  .levels{
+
+    gap: 40px;
+  }
+
+  .locked{
+
+    gap: 50px;
+  }
+
+}
+
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media(max-width:768px){
+
+  .color-bg{
+
+    align-items: flex-start;
+
+    padding-top: 100px;
+  }
+
+
+  /* Title */
+
+  .color-content h1{
+
+    font-size: 30px;
+
+    margin-bottom: 35px;
+  }
+
+
+  /* Levels */
+
+  .levels{
+
+    gap: 25px;
+  }
+
+
+  /* Locked */
+
+  .locked{
+
+    gap: 25px;
+
+    margin-top: 30px;
+  }
+
+
+  /* Circle + Lock */
+
+  .circle,
+  .lock{
+
+    width: 90px;
+
+    height: 90px;
+
+    font-size: 28px;
+  }
+
+
+  /* Text */
+
+  .level-item p{
+
+    font-size: 14px;
+  }
+
+}
+
+
+/* ============================= */
+/* SMALL MOBILE DEVICES */
+/* ============================= */
+
+@media(max-width:480px){
+
+  .color-content h1{
+
+    font-size: 24px;
+  }
+
+
+  /* Circle + Lock */
+
+  .circle,
+  .lock{
+
+    width: 75px;
+
+    height: 75px;
+
+    font-size: 22px;
+  }
+
+
+  /* Levels */
+
+  .levels{
+
+    gap: 18px;
+  }
+
+
+  /* Locked */
+
+  .locked{
+
+    gap: 18px;
+  }
+
+
+  /* Text */
+
+  .level-item p{
+
+    font-size: 12px;
+  }
+
+}

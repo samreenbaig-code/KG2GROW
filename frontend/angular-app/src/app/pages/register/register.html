@@ -1,0 +1,35 @@
+<div class="register-page">
+
+  <div class="register-card">
+
+    <h1>Create Account 🎉</h1>
+
+    <input
+      type="text"
+      placeholder="Name"
+      [(ngModel)]="name"
+    >
+
+    <input
+      type="email"
+      placeholder="Email"
+      [(ngModel)]="email"
+    >
+
+    <input
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="password"
+    >
+
+    <button (click)="register()">
+
+      Register
+
+    </button>
+
+    <p>{{ message }}</p>
+
+  </div>
+
+</div>

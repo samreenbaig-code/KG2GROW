@@ -1,0 +1,153 @@
+<!-- ============================= -->
+<!-- TRACE GAME WRAPPER -->
+<!-- Main number tracing section -->
+<!-- ============================= -->
+
+<div class="trace-wrapper">
+
+
+  <!-- ============================= -->
+  <!-- CURRENT NUMBER TITLE -->
+  <!-- Show active tracing number -->
+  <!-- ============================= -->
+
+  <h1 class="letter-title">
+
+    {{currentNumber}}
+
+  </h1>
+
+
+  <!-- ============================= -->
+  <!-- INSTRUCTION TEXT -->
+  <!-- Guide for tracing activity -->
+  <!-- ============================= -->
+
+  <p class="subtitle">
+
+    Follow the dotted number!
+
+  </p>
+
+
+  <!-- ============================= -->
+  <!-- COLOR PICKER -->
+  <!-- Select tracing color -->
+  <!-- ============================= -->
+
+  <div class="color-picker">
+
+
+    <!-- RED COLOR -->
+
+    <div
+      class="color red"
+
+      (click)="setColor('#ff3b30')">
+
+    </div>
+
+
+    <!-- BLUE COLOR -->
+
+    <div
+      class="color blue"
+
+      (click)="setColor('#007aff')">
+
+    </div>
+
+
+    <!-- GREEN COLOR -->
+
+    <div
+      class="color green"
+
+      (click)="setColor('#34c759')">
+
+    </div>
+
+
+    <!-- YELLOW COLOR -->
+
+    <div
+      class="color yellow"
+
+      (click)="setColor('#ffcc00')">
+
+    </div>
+
+
+    <!-- PURPLE COLOR -->
+
+    <div
+      class="color purple"
+
+      (click)="setColor('#af52de')">
+
+    </div>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- TRACING BOARD -->
+  <!-- Area for number tracing -->
+  <!-- ============================= -->
+
+  <div class="trace-board">
+
+
+    <!-- ============================= -->
+    <!-- DOTTED NUMBER GUIDE -->
+    <!-- Background tracing number -->
+    <!-- ============================= -->
+
+    <div class="number-guide">
+
+      {{currentNumber}}
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- DRAWING CANVAS -->
+    <!-- User tracing area -->
+    <!-- ============================= -->
+
+    <canvas
+
+      #traceCanvas
+
+      width="700"
+
+      height="350"
+
+      (mousedown)="startDrawing($event)"
+
+      (mousemove)="draw($event)"
+
+      (mouseup)="stopDrawing()"
+
+      (mouseleave)="stopDrawing()">
+
+    </canvas>
+
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- NEXT BUTTON -->
+  <!-- Move to next number -->
+  <!-- ============================= -->
+
+  <button
+    class="next-btn"
+
+    (click)="nextNumber()">
+
+    Next Number
+
+  </button>
+
+</div>
