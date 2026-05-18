@@ -168,13 +168,15 @@ Add your screenshots here.
 
 Example:
 
-```md
-![Home Page](screenshots/dashbord.png)
-![Register Page](screenshots/signup.png)
-![Game Page](screenshots/memory.png)
-```
+## 📸 Screenshots
 
----
+![Home Page](screenshots/dashboard.png)
+
+![Register Page](screenshots/signup.png)
+
+![Game Page](screenshots/memory.png)
+
+![Account Page](screenshots/account.png)
 
 ## 👩‍💻 Developed By
 
