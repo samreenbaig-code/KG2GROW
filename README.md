@@ -162,21 +162,6 @@ this.http.post('http://localhost/clevercubs-web/backend/auth/register.php', {
 
 ---
 
-## 📸 Screenshots
-
-Add your screenshots here.
-
-Example:
-
-## 📸 Screenshots
-
-![Home Page](screenshots/dashboard.png)
-
-![Register Page](screenshots/signup.png)
-
-![Game Page](screenshots/memory.png)
-
-![Account Page](screenshots/account.png)
 
 ## 👩‍💻 Developed By
 
